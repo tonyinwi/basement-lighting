@@ -1,0 +1,467 @@
+<title>Basement Rig Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one-screen split - 3D stage on the left, rig sheet on the right; stacks on phones. Single dark theme, like a lighting console. */
+:root{
+  --bg:#0e1013;
+  --panel:#15181d;
+  --raise:#1c2026;
+  --line:#2a2f37;
+  --fg:#e9e5dc;
+  --mute:#8c929c;
+  --accent:#ffb44a;   /* amber gel */
+  --scan:#5cc6ff;
+  --spot:#ffb44a;
+  --wash:#c08cff;
+  --fx:#6ff0a0;
+  --strobe:#f2f2f2;
+  --atmos:#98a1ab;
+  --warn:#ff6b5b;
+  --display:'Archivo Narrow','Arial Narrow','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--display);font-size:15px}
+*{box-sizing:border-box}
+.app{height:100%;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:12px;padding-block:12px;padding-inline:16px}
+.stage{position:relative;min-height:0;min-width:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--bg)}
+#c{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+#labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.lbl{position:absolute;transform:translate(-50%,-140%);font:500 11px/1 var(--mono);color:var(--fg);background:rgba(14,16,19,.78);border:1px solid var(--line);border-left:3px solid var(--c,var(--mute));padding:3px 5px;border-radius:3px;white-space:nowrap;pointer-events:auto;cursor:pointer;font-variant-numeric:tabular-nums}
+.lbl.sel{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.lbl.inop{opacity:.55;text-decoration:line-through}
+.lbl.approx{opacity:.6;font-style:italic}
+.hud{position:absolute;left:10px;top:10px;display:flex;flex-wrap:wrap;gap:6px;max-width:calc(100% - 20px)}
+.seg{display:flex;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:rgba(21,24,29,.9)}
+.seg button{font:600 12px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);background:transparent;border:0;padding:8px 10px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{color:var(--bg);background:var(--accent)}
+button:focus-visible,select:focus-visible,input:focus-visible,.row:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{position:absolute;left:10px;bottom:10px;display:flex;flex-wrap:wrap;gap:4px 12px;font:500 11px/1.4 var(--mono);color:var(--mute);background:rgba(21,24,29,.88);border:1px solid var(--line);border-radius:4px;padding:6px 9px;max-width:calc(100% - 20px)}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:0}
+.hint{position:absolute;right:10px;bottom:10px;font:400 11px var(--mono);color:var(--mute)}
+
+.sheet{min-height:0;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding-block:16px;padding-inline:16px;display:flex;flex-direction:column;gap:18px}
+h1{margin:0;font:700 26px/1 var(--display);letter-spacing:.01em;text-wrap:balance}
+.sub{margin:6px 0 0;color:var(--mute);font:400 12px/1.5 var(--mono)}
+h2{margin:0 0 8px;font:600 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.ctrl{display:grid;gap:10px}
+label.f{display:grid;gap:5px;font:500 12px var(--mono);color:var(--mute)}
+select{font:500 14px var(--display);color:var(--fg);background:var(--raise);border:1px solid var(--line);border-radius:4px;padding:8px}
+.toggles{display:flex;flex-wrap:wrap;gap:6px 14px;font:500 12px var(--mono);color:var(--fg)}
+.toggles label{display:flex;align-items:center;gap:6px;cursor:pointer}
+input[type=checkbox]{accent-color:var(--accent);width:15px;height:15px}
+
+.card{background:var(--raise);border:1px solid var(--line);border-left:3px solid var(--c,var(--accent));border-radius:4px;padding:12px}
+.card .nm{font:700 19px/1.1 var(--display)}
+.card .meta{margin-top:4px;font:400 12px/1.5 var(--mono);color:var(--mute)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin-top:10px;font:400 12px/1.4 var(--mono);font-variant-numeric:tabular-nums}
+.kv dt{color:var(--mute)}
+.kv dd{margin:0}
+.note{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--fg)}
+.note.warn{color:var(--warn)}
+.empty{font:400 12px/1.5 var(--mono);color:var(--mute)}
+
+.tbl{width:100%;border-collapse:collapse;font:400 12px/1.3 var(--mono);font-variant-numeric:tabular-nums}
+.tbl th{text-align:left;font:600 11px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding:6px 4px;border-bottom:1px solid var(--line)}
+.tbl th.n,.tbl td.n{text-align:right}
+.tbl td{padding:6px 4px;border-bottom:1px solid var(--line)}
+.tbl tr.grp td{padding-top:12px;font:600 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border-bottom:0}
+.tbl tr.row{cursor:pointer}
+.tbl tr.row:hover td{background:var(--raise)}
+.tbl tr.row.sel td{background:var(--fg);color:var(--bg)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;background:var(--c)}
+.tag{font-size:10px;color:var(--warn);margin-left:4px}
+.tag.m{color:var(--mute)}
+.notes{margin:0;padding-left:18px;font:400 12px/1.6 var(--mono);color:var(--mute)}
+.notes b{color:var(--fg);font-weight:500}
+
+@media (max-width:860px){
+  html,body{height:auto}
+  .app{grid-template-columns:minmax(0,1fr);height:auto}
+  .stage{height:62vh;min-height:360px}
+  .sheet{overflow:visible}
+  .hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="app">
+  <div class="stage" id="stage">
+    <canvas id="c" aria-label="3D model of the basement dance floor with every lighting fixture placed"></canvas>
+    <div id="labels"></div>
+    <div class="hud">
+      <div class="seg" role="group" aria-label="Camera view">
+        <button id="v3d" aria-pressed="true">3D</button>
+        <button id="vtop" aria-pressed="false">Top</button>
+        <button id="vback" aria-pressed="false">From ball</button>
+        <button id="vfront" aria-pressed="false">From DJ end</button>
+      </div>
+    </div>
+    <div class="legend" aria-label="Legend">
+      <span><i style="background:var(--scan)"></i>Scanners</span>
+      <span><i style="background:var(--spot)"></i>Moving heads / pin</span>
+      <span><i style="background:var(--wash)"></i>Wash</span>
+      <span><i style="background:var(--fx)"></i>Effects</span>
+      <span><i style="background:var(--strobe)"></i>Strobe</span>
+      <span><i style="background:var(--atmos)"></i>Haze / speakers</span>
+    </div>
+    <div class="hint">Drag to orbit · scroll to zoom · right-drag to pan</div>
+  </div>
+
+  <aside class="sheet">
+    <div>
+      <h1>Basement Rig Map</h1>
+      <p class="sub">Measured Oct 5, 2026 · inches · X from left I-beam, Y from mirror-ball wall, Z off the floor</p>
+    </div>
+
+    <div class="ctrl">
+      <label class="f" for="target">Aim the 10 movers at
+        <select id="target">
+          <option value="lanes">Each its own lane</option>
+          <option value="center" selected>Dance floor center</option>
+          <option value="back">Back of floor (ball end)</option>
+          <option value="front">Front of floor (DJ end)</option>
+          <option value="ball">Mirror ball</option>
+        </select>
+      </label>
+      <div class="toggles">
+        <label><input type="checkbox" id="tBeams" checked> Beams</label>
+        <label><input type="checkbox" id="tLabels" checked> Labels</label>
+        <label><input type="checkbox" id="tEye"> Head-height zone (5'0"-6'0")</label>
+        <label><input type="checkbox" id="tSpk" checked> Speakers (approx)</label>
+      </div>
+    </div>
+
+    <div>
+      <h2>Selected</h2>
+      <div id="detail"><p class="empty">Tap a fixture in the model or the list below.</p></div>
+    </div>
+
+    <div>
+      <h2>Patch and positions</h2>
+      <div style="overflow-x:auto">
+        <table class="tbl" id="tbl">
+          <thead><tr><th>Addr</th><th>Fixture</th><th class="n">X</th><th class="n">Y</th><th class="n">Z</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h2>Notes</h2>
+      <ul class="notes">
+        <li><b>Room:</b> I-beams 187" apart (centers), mirror-ball wall to speaker wall 378" by laser. Joists at 86", I-beam bottoms at 76".</li>
+        <li><b>Everything centers on the Tripar line</b> at X 93.5". The front rig is placed symmetric about it, using your measured spacing (Spots 66" apart, Scan 360s 40" apart). Front X values are provisional until the re-measure.</li>
+        <li><b>Aim figures</b> here are geometry only. Pan/tilt DMX values come after we find each mover's home position and direction.</li>
+        <li><b>Approx</b> items (speakers, Mega 64 height, WiFLY, haze) are placed by eye for context.</li>
+        <li><b>Not in the model:</b> Pocket Beam Q4 (27, unplugged), laser (not enabled, not patched). Scan 110 at 204 is inop but stays in programming.</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+const css = getComputedStyle(document.documentElement);
+const C = k => css.getPropertyValue(k).trim();
+const COL = {scan:C('--scan'),spot:C('--spot'),wash:C('--wash'),fx:C('--fx'),strobe:C('--strobe'),atmos:C('--atmos'),decor:C('--fg')};
+
+/* ---------- Fixture data (inches) ---------- */
+const BACK=0, FRONT=378, BAR=362;
+const FX = [
+  {id:'ball',addr:'Ball',name:'Mirror ball',model:'16" mirror ball',kind:'decor',grp:'Back wall',x:12,y:8,z:71,mount:'Hangs at the back wall; top at 79"'},
+  {id:'52',addr:52,name:'Saber Spot Go',model:'12ch pin spot',kind:'spot',grp:'Left I-beam',x:0,y:82,z:76,beam:5,fixed:{x:12,y:8,z:71},mount:'Upright on the beam, display to the front, lens aimed back at the ball'},
+  {id:'171',addr:171,name:'Scan 110',model:'Intimidator Scan 110 · 11ch',kind:'scan',grp:'Left I-beam',x:0,y:115,z:79,beam:10,mover:true,mount:'Under the beam at the joists, mirror toward floor center'},
+  {id:'160',addr:160,name:'Scan 110',model:'Intimidator Scan 110 · 11ch',kind:'scan',grp:'Left I-beam',x:0,y:175,z:79,beam:10,mover:true,mount:'Under the beam at the joists, mirror toward floor center'},
+  {id:'149',addr:149,name:'Scan 110',model:'Intimidator Scan 110 · 11ch',kind:'scan',grp:'Left I-beam',x:0,y:235,z:79,beam:10,mover:true,mount:'Under the beam at the joists, mirror toward floor center'},
+  {id:'204',addr:204,name:'Scan 110',model:'Intimidator Scan 110 · 11ch',kind:'scan',grp:'Right I-beam',x:187,y:115,z:79,beam:10,mover:true,inop:true,mount:'Opposite 171. Inop for now; kept in programming'},
+  {id:'193',addr:193,name:'Scan 110',model:'Intimidator Scan 110 · 11ch',kind:'scan',grp:'Right I-beam',x:187,y:175,z:79,beam:10,mover:true,mount:'Opposite 160, mirror toward floor center'},
+  {id:'182',addr:182,name:'Scan 110',model:'Intimidator Scan 110 · 11ch',kind:'scan',grp:'Right I-beam',x:187,y:235,z:79,beam:10,mover:true,mount:'Opposite 149, mirror toward floor center'},
+  {id:'94',addr:94,name:'Tripar',model:'Mega Tripar Profile Plus · 10ch',kind:'wash',grp:'Ceiling (joist bays)',x:93.5,y:59,z:86,beam:40,fixed:{x:93.5,y:59,z:0},mount:'Recessed in the joists, pointing down'},
+  {id:'84',addr:84,name:'Tripar',model:'Mega Tripar Profile Plus · 10ch',kind:'wash',grp:'Ceiling (joist bays)',x:93.5,y:123,z:86,beam:40,fixed:{x:93.5,y:123,z:0},mount:'Recessed in the joists, pointing down'},
+  {id:'74',addr:74,name:'Tripar',model:'Mega Tripar Profile Plus · 10ch',kind:'wash',grp:'Ceiling (joist bays)',x:93.5,y:187,z:86,beam:40,fixed:{x:93.5,y:187,z:0},mount:'Recessed in the joists, pointing down'},
+  {id:'64',addr:64,name:'Tripar',model:'Mega Tripar Profile Plus · 10ch',kind:'wash',grp:'Ceiling (joist bays)',x:93.5,y:251,z:86,beam:40,fixed:{x:93.5,y:251,z:0},mount:'Recessed in the joists, pointing down'},
+  {id:'1',addr:1,name:'Spot 255',model:'Intimidator Spot 255 IRC · 13ch',kind:'spot',grp:'Front bar',x:60,y:BAR,z:69,beam:15,mover:true,mount:'Hung upside down on the front bar'},
+  {id:'300',addr:300,name:'Scan 360 v2',model:'Intimidator Scan 360 · 14ch (Mode 2)',kind:'scan',grp:'Front bar',x:74,y:BAR,z:72,beam:21,mover:true,mount:'Hangs on the front bar, mirror on top'},
+  {id:'126',addr:126,name:'Mega 64',model:'Mega 64 Profile Par · 9ch',kind:'wash',grp:'Front bar',x:94,y:369,z:74,approxZ:true,beam:30,fixed:{x:94,y:378,z:40},mount:'9" off the speaker wall, washing it'},
+  {id:'315',addr:315,name:'Scan 360 v4',model:'Intimidator Scan 360 Rev 2 · 12ch (Mode 2)',kind:'scan',grp:'Front bar',x:114,y:BAR,z:72,beam:21,mover:true,mount:'Hangs on the front bar, mirror on top. Software V4'},
+  {id:'14',addr:14,name:'Spot 255',model:'Intimidator Spot 255 IRC · 13ch',kind:'spot',grp:'Front bar',x:126,y:BAR,z:69,beam:15,mover:true,mount:'Hung upside down on the front bar'},
+  {id:'405',addr:405,name:'Vortex',model:'Eliminator Vortex (VOR100) · 12ch',kind:'fx',grp:'In front of the bar',x:38,approx:true,y:327,z:77,mount:'Barrel moonflower, 2\'11" in front of the bar. Throws beams everywhere'},
+  {id:'417',addr:417,name:'Shocker Panel 180',model:'Shocker Panel 180 USB · 8ch (Mode 3)',kind:'strobe',grp:'Speaker wall',x:93.5,y:376,z:48,beam:60,fixed:{x:93.5,y:200,z:48},mount:'Under the center speaker, facing the room'},
+  {id:'141',addr:141,name:'Z-350 hazer',model:'Z-350 · 2ch',kind:'atmos',grp:'Speaker wall',x:80,y:370,z:12,approx:true,mount:'On the floor next to the sub, blowing toward the floor'},
+  {id:'104',addr:104,name:'WiFLY Bar QA5',model:'WiFLY Bar QA5 · 22ch (wireless DMX)',kind:'wash',grp:'Lounge (behind fireplace wall)',x:96,y:-56,z:86,approx:true,beam:35,fixed:{x:24,y:-56,z:30},mount:'On the joists in the lounge, aimed left at the fireplace front'}
+];
+const byId = Object.fromEntries(FX.map(f=>[f.id,f]));
+
+const TARGETS = {
+  center:{x:93.5,y:189,z:0,label:'dance floor center'},
+  back:{x:93.5,y:100,z:0,label:'back of the floor'},
+  front:{x:93.5,y:290,z:0,label:'front of the floor'},
+  ball:{x:12,y:8,z:71,label:'mirror ball'}
+};
+function aimFor(f,mode){
+  if(f.fixed) return f.fixed;
+  if(!f.mover) return null;
+  if(mode==='lanes'){
+    if(f.grp==='Front bar') return {x:f.x,y:250,z:0,label:'its lane'};
+    return {x:f.x===0?62:125,y:f.y,z:0,label:'its lane'};
+  }
+  return TARGETS[mode];
+}
+
+/* ---------- helpers ---------- */
+const V = (x,y,z)=>new THREE.Vector3(x,z,-y);  // room -> three
+function ftin(v){const s=v<0?'-':'';v=Math.abs(v);let f=Math.floor(v/12),i=Math.round(v-f*12);if(i===12){f++;i=0}return `${s}${f}'${i}"`}
+const r1 = v=>Number.isInteger(v)?String(v):v.toFixed(1);
+
+/* ---------- scene ---------- */
+const stage=document.getElementById('stage'), canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+renderer.setClearColor(0x0e1013);
+const scene=new THREE.Scene();
+scene.fog=new THREE.Fog(0x0e1013,900,1800);
+const camera=new THREE.PerspectiveCamera(48,1,1,5000);
+const controls=new THREE.OrbitControls(camera,canvas);
+controls.enableDamping=true; controls.dampingFactor=.08;
+scene.add(new THREE.AmbientLight(0xffffff,.55));
+const dl=new THREE.DirectionalLight(0xffffff,.55); dl.position.set(-200,400,200); scene.add(dl);
+
+const X0=-48, X1=235, W=X1-X0;
+function box(w,h,d,color,pos,opts={}){
+  const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color,roughness:.85,metalness:.05,transparent:!!opts.op,opacity:opts.op??1}));
+  m.position.copy(pos); scene.add(m); return m;
+}
+// floor
+const floorAll=new THREE.Mesh(new THREE.PlaneGeometry(W,FRONT+80),new THREE.MeshStandardMaterial({color:0x17191d,roughness:1}));
+floorAll.rotation.x=-Math.PI/2; floorAll.position.set(93.5,-.2,-(FRONT-80)/2); scene.add(floorAll);
+const dance=new THREE.Mesh(new THREE.PlaneGeometry(187,FRONT),new THREE.MeshStandardMaterial({color:0x2b2721,roughness:.9}));
+dance.rotation.x=-Math.PI/2; dance.position.set(93.5,0,-FRONT/2); scene.add(dance);
+// 2 ft grid on the dance floor
+{const pts=[];for(let x=0;x<=187;x+=24){pts.push(V(x,0,.2),V(x,FRONT,.2))}pts.push(V(187,0,.2),V(187,FRONT,.2));
+ for(let y=0;y<=FRONT;y+=24){pts.push(V(0,y,.2),V(187,y,.2))}
+ const g=new THREE.BufferGeometry().setFromPoints(pts);scene.add(new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:0x3d3830})));}
+// centerline
+{const g=new THREE.BufferGeometry().setFromPoints([V(93.5,0,.4),V(93.5,FRONT,.4)]);scene.add(new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:0x7a5a2a})));}
+// walls (outline + faint fill)
+function wall(y,op){
+  const m=new THREE.Mesh(new THREE.PlaneGeometry(W,86),new THREE.MeshStandardMaterial({color:0x2a2e35,transparent:true,opacity:op,side:THREE.DoubleSide,depthWrite:false}));
+  m.position.copy(V(93.5,y,43)); scene.add(m);
+  const e=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(W,86)),new THREE.LineBasicMaterial({color:0x444a54}));
+  e.position.copy(m.position); scene.add(e);
+}
+wall(BACK,.12); wall(FRONT,.55);
+// I-beams
+box(4,8,FRONT,0x3a3f47,V(0,FRONT/2,80));
+box(4,8,FRONT,0x3a3f47,V(187,FRONT/2,80));
+// joists, across the room, 16" on center
+const joists=new THREE.Group();scene.add(joists);
+for(let y=8;y<=FRONT;y+=16){const j=new THREE.Mesh(new THREE.BoxGeometry(W,7.5,1.5),new THREE.MeshStandardMaterial({color:0x4b3626,roughness:1,transparent:true,opacity:.55,depthWrite:false}));j.position.copy(V(93.5,y,89.75));joists.add(j)}
+// front bar pipe
+{const p=new THREE.Mesh(new THREE.CylinderGeometry(1,1,124,10),new THREE.MeshStandardMaterial({color:0x555b63,metalness:.6,roughness:.4}));p.rotation.z=Math.PI/2;p.position.copy(V(93.5,BAR,81));scene.add(p)}
+// fireplace hint (lounge side of back wall)
+box(4,40,70,0x3b3631,V(24,-56,20),{op:.9});
+
+// speakers, approximate
+const spk=new THREE.Group();scene.add(spk);
+function spkBox(w,h,d,x,y,z){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color:0x22262c,roughness:.9,transparent:true,opacity:.85}));m.position.copy(V(x,y,z));spk.add(m);
+  const e=new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry),new THREE.LineBasicMaterial({color:0x5a616b}));e.position.copy(m.position);spk.add(e)}
+spkBox(14,26,16,38,368,13); spkBox(14,30,13,38,368,62);   // left F1 sub + 812
+spkBox(14,26,16,148,368,13); spkBox(14,30,13,148,368,62); // right F1 sub + 812
+spkBox(26,20,20,93.5,364,10);                               // QSC KSub
+spkBox(14,26,13,93.5,372,70);                               // center fill
+
+// eye-level zone
+const eye=new THREE.Mesh(new THREE.BoxGeometry(187,12,FRONT),new THREE.MeshBasicMaterial({color:0xff6b5b,transparent:true,opacity:.07,depthWrite:false}));
+eye.position.copy(V(93.5,FRONT/2,66)); eye.visible=false; scene.add(eye);
+{const e=new THREE.LineSegments(new THREE.EdgesGeometry(eye.geometry),new THREE.LineBasicMaterial({color:0xff6b5b,transparent:true,opacity:.35}));eye.add(e)}
+
+/* ---------- fixtures ---------- */
+const pickables=[]; const meshOf={};
+function mat(kind,inop){const c=new THREE.Color(inop?'#555a61':COL[kind]);return new THREE.MeshStandardMaterial({color:c,emissive:c,emissiveIntensity:.25,roughness:.5,metalness:.2})}
+function geomFor(f){
+  switch(f.id==='ball'?'ball':f.kind+'|'+f.name){
+    case 'ball': return new THREE.SphereGeometry(8,24,16);
+  }
+  if(f.name==='Scan 110') return new THREE.BoxGeometry(12,6,6);
+  if(f.name.startsWith('Scan 360')) return new THREE.BoxGeometry(8,14,7);
+  if(f.name==='Spot 255') return new THREE.BoxGeometry(9,9,9);
+  if(f.kind==='wash' && f.name==='Tripar') return new THREE.CylinderGeometry(5,5,2,20);
+  if(f.name==='Mega 64') return new THREE.CylinderGeometry(4,4,7,16);
+  if(f.name==='Saber Spot Go') return new THREE.CylinderGeometry(1.8,1.8,6,12);
+  if(f.name==='Vortex') return new THREE.BoxGeometry(11,8,7);
+  if(f.name.startsWith('Shocker')) return new THREE.BoxGeometry(18,6,3);
+  if(f.name.startsWith('Z-350')) return new THREE.BoxGeometry(10,9,15);
+  if(f.name.startsWith('WiFLY')) return new THREE.BoxGeometry(22,3,3);
+  return new THREE.BoxGeometry(6,6,6);
+}
+const drops=new THREE.Group();scene.add(drops);
+FX.forEach(f=>{
+  let m;
+  if(f.id==='ball'){m=new THREE.Mesh(geomFor(f),new THREE.MeshStandardMaterial({color:0xd8d8d8,metalness:1,roughness:.25,emissive:0x333333}))}
+  else m=new THREE.Mesh(geomFor(f),mat(f.kind,f.inop));
+  m.position.copy(V(f.x,f.y,f.z)); m.userData.id=f.id; scene.add(m);
+  pickables.push(m); meshOf[f.id]=m;
+  const g=new THREE.BufferGeometry().setFromPoints([V(f.x,f.y,f.z),V(f.x,f.y,0)]);
+  const l=new THREE.Line(g,new THREE.LineDashedMaterial({color:0x50565f,dashSize:3,gapSize:3}));l.computeLineDistances();l.userData.id=f.id;drops.add(l);
+});
+
+/* ---------- beams ---------- */
+const beams=new THREE.Group();scene.add(beams);
+function buildBeams(){
+  while(beams.children.length){const c=beams.children.pop();c.geometry.dispose();c.material.dispose()}
+  const mode=document.getElementById('target').value;
+  FX.forEach(f=>{
+    if(f.inop) return;
+    const t=aimFor(f,mode); if(!t||!f.beam) return;
+    const a=V(f.x,f.y,f.z), b=V(t.x,t.y,t.z);
+    const len=a.distanceTo(b); if(len<1) return;
+    const rb=Math.max(1.5,len*Math.tan(f.beam*Math.PI/360));
+    const geo=new THREE.CylinderGeometry(.6,rb,len,24,1,true);
+    const c=new THREE.Color(COL[f.kind]||'#ffffff');
+    const m=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:selected===f.id?.32:.13,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide}));
+    const dir=a.clone().sub(b).normalize();
+    m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),dir);
+    m.position.copy(a.clone().add(b).multiplyScalar(.5));
+    beams.add(m);
+    if(t.z<=0.5){ // floor pool
+      const pool=new THREE.Mesh(new THREE.CircleGeometry(rb,32),new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:selected===f.id?.5:.22,blending:THREE.AdditiveBlending,depthWrite:false}));
+      pool.rotation.x=-Math.PI/2;pool.position.copy(V(t.x,t.y,.6));beams.add(pool);
+    }
+  });
+  beams.visible=document.getElementById('tBeams').checked;
+}
+
+/* ---------- labels ---------- */
+const labelsEl=document.getElementById('labels'); const lblOf={};
+FX.forEach(f=>{
+  const d=document.createElement('div');d.className='lbl'+(f.inop?' inop':'')+(f.approx?' approx':'');
+  d.style.setProperty('--c',f.id==='ball'?'#d8d8d8':COL[f.kind]);
+  d.textContent=f.id==='ball'?'Ball':String(f.addr);
+  d.addEventListener('click',()=>select(f.id));
+  labelsEl.appendChild(d);lblOf[f.id]=d;
+});
+const tmp=new THREE.Vector3();
+function placeLabels(){
+  const show=document.getElementById('tLabels').checked;
+  const w=stage.clientWidth,h=stage.clientHeight;
+  FX.forEach(f=>{
+    const d=lblOf[f.id];
+    if(!show){d.hidden=true;return}
+    tmp.copy(meshOf[f.id].position).project(camera);
+    if(tmp.z>1||tmp.x<-1.1||tmp.x>1.1||tmp.y<-1.1||tmp.y>1.1){d.hidden=true;return}
+    d.hidden=false;d.style.left=((tmp.x+1)/2*w)+'px';d.style.top=((1-tmp.y)/2*h)+'px';
+  });
+}
+
+/* ---------- selection + detail ---------- */
+let selected=null;
+function aimText(f,t){
+  const dx=t.x-f.x,dy=t.y-f.y,dz=t.z-f.z;
+  const h=Math.hypot(dx,dy),thr=Math.hypot(h,dz);
+  const drop=Math.atan2(-dz,h)*180/Math.PI;
+  let brg=Math.atan2(dx,dy)*180/Math.PI;
+  let side;
+  const ab=Math.abs(brg);
+  if(ab<3) side='straight toward the speaker wall';
+  else if(ab>177) side='straight toward the ball wall';
+  else side=`${Math.round(ab)}° ${brg>0?'right':'left'} of straight-to-speakers`;
+  return {thr,h,drop,side};
+}
+function detail(){
+  const el=document.getElementById('detail');
+  if(!selected){el.innerHTML='<p class="empty">Tap a fixture in the model or the list below.</p>';return}
+  const f=byId[selected];const mode=document.getElementById('target').value;
+  const col=f.id==='ball'?'#d8d8d8':COL[f.kind];
+  let html=`<div class="card" style="--c:${col}"><div class="nm">${f.addr==='Ball'?'':f.addr+' · '}${f.name}</div><div class="meta">${f.model}</div>
+  <dl class="kv"><dt>Where</dt><dd>${f.grp}</dd>
+  <dt>X</dt><dd>${r1(f.x)}" (${ftin(f.x)}) from left I-beam</dd>
+  <dt>Y</dt><dd>${r1(f.y)}" (${ftin(f.y)}) from ball wall</dd>
+  <dt>Z</dt><dd>${r1(f.z)}" (${ftin(f.z)}) off the floor${f.approxZ||f.approx?' · approx':''}</dd></dl>
+  <p class="note">${f.mount}</p>`;
+  const t=aimFor(f,mode);
+  if(t&&!f.inop){
+    const a=aimText(f,t);
+    const what=f.fixed?(f.id==='52'?'the mirror ball':f.kind==='wash'?'its fixed wash point':'the room'):t.label;
+    html+=`<dl class="kv"><dt>Aimed at</dt><dd>${what}</dd><dt>Throw</dt><dd>${Math.round(a.thr)}" (${ftin(a.thr)})</dd>
+    <dt>Bearing</dt><dd>${a.side}</dd><dt>Angle</dt><dd>${a.drop>=0?Math.round(a.drop)+'° below level':Math.round(-a.drop)+'° above level'}</dd></dl>`;
+    if(f.mover&&Math.abs(a.drop)<12) html+=`<p class="note warn">Nearly level: this beam crosses the room around head height.</p>`;
+  }
+  if(f.inop) html+=`<p class="note warn">Inop. Left patched so looks include it once it's repaired.</p>`;
+  html+='</div>';el.innerHTML=html;
+}
+function select(id){
+  selected=selected===id?null:id;
+  FX.forEach(f=>{
+    const on=f.id===selected;
+    lblOf[f.id].classList.toggle('sel',on);
+    const m=meshOf[f.id];if(m.material.emissiveIntensity!==undefined&&f.id!=='ball')m.material.emissiveIntensity=on?.9:.25;
+  });
+  drops.children.forEach(l=>{l.material.color.set(l.userData.id===selected?0xffb44a:0x50565f)});
+  document.querySelectorAll('#tbl tr.row').forEach(r=>r.classList.toggle('sel',r.dataset.id===selected));
+  buildBeams();detail();
+}
+
+/* ---------- table ---------- */
+{
+  const tb=document.querySelector('#tbl tbody');let last='';
+  FX.forEach(f=>{
+    if(f.grp!==last){last=f.grp;const g=document.createElement('tr');g.className='grp';g.innerHTML=`<td colspan="5">${f.grp}</td>`;tb.appendChild(g)}
+    const r=document.createElement('tr');r.className='row';r.dataset.id=f.id;r.tabIndex=0;
+    const col=f.id==='ball'?'#d8d8d8':COL[f.kind];
+    r.innerHTML=`<td>${f.addr==='Ball'?'-':f.addr}</td><td><span class="dot" style="--c:${col}"></span>${f.name}${f.inop?'<span class="tag">inop</span>':''}${f.approx?'<span class="tag m">approx</span>':''}</td><td class="n">${r1(f.x)}</td><td class="n">${r1(f.y)}</td><td class="n">${r1(f.z)}</td>`;
+    r.addEventListener('click',()=>select(f.id));
+    r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(f.id)}});
+    tb.appendChild(r);
+  });
+}
+
+/* ---------- picking ---------- */
+const ray=new THREE.Raycaster(),mouse=new THREE.Vector2();let down=null;
+canvas.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY}});
+canvas.addEventListener('pointerup',e=>{
+  if(!down||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;
+  const r=canvas.getBoundingClientRect();
+  mouse.set(((e.clientX-r.left)/r.width)*2-1,-((e.clientY-r.top)/r.height)*2+1);
+  ray.setFromCamera(mouse,camera);
+  const hit=ray.intersectObjects(pickables,false)[0];
+  if(hit)select(hit.object.userData.id);
+});
+
+/* ---------- views ---------- */
+const views={
+  v3d:{p:V(93.5,-190,240),t:V(93.5,210,20)},
+  vtop:{p:V(93.5,188,760),t:V(93.5,189,0)},
+  vback:{p:V(93.5,-30,64),t:V(93.5,378,50)},
+  vfront:{p:V(80,410,64),t:V(93.5,0,45)}
+};
+function setView(k){
+  const v=views[k];camera.position.copy(v.p);controls.target.copy(v.t);controls.update();
+  Object.keys(views).forEach(id=>document.getElementById(id).setAttribute('aria-pressed',id===k?'true':'false'));
+  joists.visible = k!=='vtop';
+}
+Object.keys(views).forEach(k=>document.getElementById(k).addEventListener('click',()=>setView(k)));
+controls.addEventListener('start',()=>{joists.visible=true});
+
+/* ---------- controls ---------- */
+document.getElementById('target').addEventListener('change',()=>{buildBeams();detail()});
+document.getElementById('tBeams').addEventListener('change',e=>{beams.visible=e.target.checked});
+document.getElementById('tEye').addEventListener('change',e=>{eye.visible=e.target.checked});
+document.getElementById('tSpk').addEventListener('change',e=>{spk.visible=e.target.checked});
+
+/* ---------- size + loop ---------- */
+function resize(){
+  const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;
+  renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(stage);
+resize();setView('v3d');buildBeams();
+(function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera);placeLabels()})();
+})();
+</script>
