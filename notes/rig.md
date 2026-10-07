@@ -12,7 +12,7 @@ Units are inches. X is measured from the left I-beam, Y from the mirror-ball wal
 | Centerline | X 93.5", the Tripar line. Everything centers on it. |
 | Mirror ball | 16" ball, top at 79", 12" off the left I-beam, at the back wall |
 | Front bar | 16" (1'4") off the speaker wall (Y 362), bottom at 80" (6'8") |
-| DJ booth | Off to the side. Not relevant to the rig. |
+| DJ booth | Moved 2026-10-06: now at the front of the dance floor, stage right (see the note below). Earlier it sat off to the side. |
 
 ## Fixtures (Universe 1)
 Listed from the front (speakers) toward the back.
