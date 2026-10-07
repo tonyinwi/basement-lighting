@@ -44,7 +44,7 @@
 | Tiny Ball | The Pocket Beam on the tiny mirror ball | Pocket Beam aimed by Tony. The other movers are left at center. |
 | Lanes | Each Scan 110 throws straight across a short way, so its pool stays on its own side and the pools make two lanes down the sides. The front bar points down the centerline. | Checked with Tony's phone photo 2026-10-06. The first try (Scan 110 tilt Y 369 old frame) landed too close to the centerline; lowered 25 px (L3/R3 35 px). |
 | Ball | The big mirror ball at the back wall, by the left I-beam. Pocket Beam on the ball; the Saber (52) already lights it. Other movers stay at Floor Center. | Done 2026-10-06. Spot 255 beams are too wide for the ball (no iris, no tight-dot gobo), so the Spots stay at Floor Center. The first Pocket Beam aim was 180° off (it hit the block wall beside it); after swinging the pan 180°, Tony dragged it onto the ball himself. The little ball still lines up perfectly in the other positions. |
-| 841 Logo | Spot 1 with the custom 841 gobo (value 36), nearly straight down on the floor right in front of the speakers, center, by the Shocker. A steep throw keeps the logo from stretching. Tony sets the focus by hand. | Created 2026-10-06. Spot 1 first aim (552, 386 new frame) came from the geometry and landed a bit too close to the speakers; Tony is dragging it toward the back himself. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
+| 841 Logo | Spot 1 with the custom 841 gobo (value 36) on the white block wall behind the bar. | Created 2026-10-06. The plan was the floor in front of the speakers, but the logo wouldn't focus well on the floor, so Tony aimed it at the bar's back wall himself, where it's big and readable. It projects upside down, so the gobo needs turning 180° in its holder. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
 
 The Pocket Beam is on the tiny ball (429, 509) in **every** position, so it always lights it.
 
@@ -105,24 +105,28 @@ Added 2026-10-06. Before this, the stock Autoloops had no working position cues,
 Banks 2-4 have no position cues yet.
 
 ## Spot 255 gobo wheel (F1 Spot 1)
-Identified 2026-10-06 from a slot-by-slot sweep Tony filmed. The SoundSwitch Gobo Wheel attribute takes raw DMX (0-255), and each slot is about 8 values wide, so use the middle of a range.
+Identified 2026-10-06 from a slot-by-slot sweep Tony filmed, and matched to the Chauvet manual (13ch mode). The SoundSwitch Gobo Wheel attribute takes raw DMX (0-255). Each slot is 8 values wide, so use the middle of a range.
 
-| Value | Gobo | Tony's take |
+| DMX | Gobo | Tony's take |
 |---|---|---|
 | 0-7 (use 4) | Open | |
-| 12 | Pink dot ring (colored glass, 8 dots in a ring) | Useful, and it can overlap with the other spot |
-| 20 | Shattered / breakup | |
-| 28 | Swirl (3-arm galaxy) | |
-| 36 | **841 logo** - custom, the basement's nickname. Spot 1 only. | Signature piece. Needs a steep throw and a manual focus. |
-| 44 | Rose / spiral rings | |
-| 52 | Diamond grid | |
-| 60 | Dense dot field | |
-| 64-70+ | Shake | Not useful |
+| 8-15 (use 12) | Gobo 1: pink dot ring (colored glass, 8 dots in a ring) | Useful, and it can overlap with the other spot |
+| 16-23 (use 20) | Gobo 2: shattered / breakup | |
+| 24-31 (use 28) | Gobo 3: swirl (3-arm galaxy) | |
+| 32-39 (use 36) | Gobo 4: **841 logo** - custom, "841 STUDIO" with a triangle and swoosh. The basement's nickname. Spot 1 only. | Signature piece |
+| 40-47 (use 44) | Gobo 5: rose / spiral rings | |
+| 48-55 (use 52) | Gobo 6: diamond grid | |
+| 56-63 (use 60) | Gobo 7: dense dot field | |
+| 64-119 | Shake, gobo 7 down to gobo 1 (8 values each, slow to fast) | Not useful |
+| 120-127 | Open | |
+| 128-191 / 192-255 | Wheel cycle / reverse cycle, speeding up | |
 
-- An earlier quick pass seemed to show 10 = open. The slot-by-slot sweep is the one to trust.
+- **Gobo Rotation** (ch 8): 0-7 off, 8-119 spin, 120-231 reverse spin, 232-255 bounce. **There's no indexing** (no fixed angles), so the channel can't hold the logo upright.
+- **The 841 logo projects upside down** on the bar's back wall (2026-10-06 photo). The fix is physical: unplug the fixture, open the gobo access cover, pull the 841 holder, and turn the gobo 180° in it. Turn it; don't flip it over, or the text mirrors. The full steps are in the Chauvet manual.
+- An earlier quick pass seemed to show 10 = open. The slot-by-slot sweep and the manual are the ones to trust.
 - None of the gobos gives a tight single dot, so the big ball needs the Pocket Beam, the Saber, or a new LED pinspot.
-- Gobo Rotation can stand the 841 logo upright.
 - Spot 14's wheel hasn't been checked; it doesn't have the 841 gobo.
+- Source: [Intimidator Spot 255 IRC user manual, Rev. 4](https://www.chauvetdj.com/wp-content/uploads/2016/01/Intimidator_Spot_255_IRC_UM_Rev4.pdf)
 
 ## Calibration and show looks (Static Looks, Bank 4)
 - **CAL Test (slot 1):** includes every fixture. Used to isolate one fixture at a time. Last state: the Vortex at full with Barrel Rotation 65, everything else at 0.
