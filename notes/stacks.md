@@ -7,7 +7,7 @@ Built from Tony's direction on 2026-10-06 (see `CLAUDE.md`, "How Tony wants Auto
 - **Small casts placed in space.** Leave darkness. Use single lights for moments.
 - **EDM and 80s never mix.** Bank 1 is EDM / tech house. Bank 2 is 80s.
 
-Status: **draft plan**. What actually got built, and how, is at the bottom.
+Status: **draft plan, revised after the research pass** (`design-research.md`). What actually got built, and how, is at the bottom.
 
 ## References Tony likes
 - **Mau P** (tech house): hard red and white, strobe hits on the drops, lots of darkness between hits; bouncy and cheeky. Sets: [Club Space Terrace](https://www.youtube.com/watch?v=cfaHNv3VLo4), [Under the K Bridge, 4-hour set](https://www.youtube.com/watch?v=1SLZ9M-bH-Y), [EDC Las Vegas 2024](https://www.youtube.com/watch?v=RhouHtUGFT8)
@@ -35,19 +35,19 @@ Treat each light, or each pair, as a character that interacts with the others:
 | Lounge | WiFLY 104 (Wash Tertiary), behind the back wall | Separate room. Keep a steady, low glow so it doesn't fight the floor. |
 | Logo | Spot 1 on the 841 gobo, through the "841" static look | A static look over the stack, not part of it |
 
-## Bank 1 - EDM / tech house (play Sequential)
-The arc goes from cool and minimal, through a groove, up to a peak, through a breakdown, and back down.
+## Bank 1 - tech house / techno (play Sequential) - revised after research
+The orchestra principle: few instruments at a time, building toward a few big moments. Color sits in the pools; white sits in the beams. Wheel lights hold one color per loop.
 
-| # | Name | Color | Cast (everything else dark) | Placement / motion | Feeling | Hands off to next by... |
+| # | Name | Bars | Palette | Lead / support (everything else at 0) | What the objects do | Hands off by... |
 |---|---|---|---|---|---|---|
-| 1 | Blue Hour | Deep blue | Tripars low, both balls | Tripars breathe slowly on the bar; balls steady | Cool, open, welcoming | Keeping blue and adding beams |
-| 2 | Ice | Blue + cyan | Tripars blue, Scan 360s cyan | Scan 360s drift slowly between Floor Center and Front | Clean, cold | Cyan beams stay while the floor warms |
-| 3 | Violet Groove | Purple | Tripars purple, Spots with the pink dot-ring gobo | Spot pools stacked on Floor Center, pulsing on the beat | Warm, sexy groove | The purple deepens into red |
-| 4 | Red Room | Red + white | Tripars dim red, Scan 110s white | Scan 110s in a slow Cross, intensity on the kick | Dark, driving tech house | The white beams carry over |
-| 5 | White Lines | White | Scan 110s in Lanes, Mega64 deep blue on the speaker wall | Beams in haze down the sides; floor dark | Tense, minimal build | Everything white is about to open up |
-| 6 | Peak | White + blue | Everything: movers white on Floor Center, Tripars white/blue, Shocker hits every 4 bars | Movers move, Tripars chase front to back | The one all-on moment | It drops out to near-black |
-| 7 | Ball Break | Dark + sparkle | Saber on the big ball, Pocket on the tiny ball, Tripar C4 a whisper of blue | Nothing moves; only the dots turn | Breathe, the breakdown | Blue rises again into #1 |
-| 8 | Blue Return | Blue + magenta | Tripars blue, Spots magenta at Front of Floor | Slow; Spots ease from Front to Floor Center | Settled groove, loops back to #1 | Back to blue |
+| 1 | Blue Hour | 32 | Deep blue + warm white sparkle | Tripars blue, breathing; Saber and Pocket on the balls | Nothing moves. The room is open and calm. | The blue floor stays |
+| 2 | Scissors | 32 | Ice blue + white | Scan 110s white; Scan 360s cyan anchor on Floor Center; Mega64 deep blue low | L/R scans alternate Lanes and Cross every 8 bars, the mirror pairs opening and closing like scissors | Beams stay; blue turns red |
+| 3 | Cherry Bounce (Mau P) | 32 | Red + white | Tripars red, pulsing on the kick; Scan 110s white at Lanes | The floor answers the kick, the side beams answer the offbeat | Red stays; the front bar joins |
+| 4 | Call & Answer | 32 | Red + white | Spots wheel-red with the breakup gobo at Front of Floor, alternating with the Scan 110s at Cross every 2 bars; Tripars C2/C3 red low | Front bar and side beams trade phrases; the last 4 bars trade every bar | Tension, then strip down |
+| 5 | The Sweep (orchestra) | 64 | Amber + white | A dim amber wash; the Scan 110s sweep back to front (G3, G2, G1); Spots and Scan 360s join, and everything converges on Floor Center at the end | The Facebook-post moment: the sweep lands at the climax | It lands on the peak |
+| 6 | Spiral Peak (Carl Cox) | 16 | White + deep blue | The only all-on look: front bar open white on Floor Center; Scan 110 pairs moving; Tripars blue on the kick; Shocker 1/4 notes on bars 1 and 9 only | Groups use different movement shapes so it reads organic | Drops to near-black |
+| 7 | One Beam | 16 | White + faint warm ball | L2 160 alone, fading in, with a tiny slow scan; Saber low on the ball | One instrument alone: the breakdown | Blue rises |
+| 8 | Blue Return | 32 | Deep blue + magenta | Tripars blue; Spots wheel-magenta easing from Front of Floor to Floor Center; balls | A settled groove; loops back to #1 | Back to Blue Hour |
 
 ## Bank 2 - 80s (play Sequential)
 Neon, mirror balls, warm sunsets and gobos. No tech-house red or white beams.
