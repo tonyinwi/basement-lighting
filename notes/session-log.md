@@ -22,3 +22,5 @@
 - **00:00** Back of Floor and Cross positions made from geometry. The Pocket Beam was put on the tiny ball in every position.
 - **00:05** Position cues added to all 8 Bank 1 Autoloops. Project and lightshow saved. Left running on Bank 1 for Tony to review.
 - **17:55** Repo created from the session notes.
+- **18:50** Ring "Dance floor" camera mounted on the back wall; its Live View in Chrome replaces the iPhone/Photo Booth feed (not mirrored; night vision; Live View times out every ~5 min and needs Reconnect clicked). Claude can only view Chrome, not click it.
+- **19:08** Back of Floor checked: L1/R1 and L2/R2 were crossing past each other, so their tilt was lowered; L3 small trim; front-bar Spots tilted toward the ball; Scan 360s land together. Saved.

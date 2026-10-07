@@ -16,7 +16,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - **Positions:**
   - Floor Center and Front of Floor are camera-checked.
   - Tiny Ball has only the Pocket Beam aimed.
-  - Back of Floor and Cross were calculated from the geometry and haven't been checked yet.
+  - Back of Floor is camera-checked (2026-10-06). Cross was calculated from the geometry and hasn't been checked yet.
   - The Pocket Beam sits on the tiny ball in every position.
 - **Autoloops:**
   - All 8 in Bank 1 now have position cues, so their movers move.
@@ -25,10 +25,10 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.
 - **Mac setup:**
   - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude.ssproj`. Always use the **disk venue**. The USB venue is the Control One copy.
-  - For calibration, an iPhone on a tripod behind C4 faces the speakers. Its Continuity Camera feed shows in Photo Booth (the image is mirrored).
+  - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Its Live View runs in Chrome below SoundSwitch. Claude can see Chrome but can't click it, so Tony clicks Reconnect when Live View times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-1. Check Back of Floor and Cross on camera, and fine-tune them.
+1. Check Cross on camera, and fine-tune it.
 2. Add the Lanes and Ball (big mirror ball) positions.
 3. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
 4. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:

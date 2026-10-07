@@ -9,10 +9,9 @@
 6. Switch to Edit mode and **File > Save Project**. Do this after every fixture.
 
 ## Camera setup
-- iPhone on a tripod on the centerline, about 1 ft behind C4, facing the speakers.
-- Continuity Camera feed in Photo Booth on the Mac, side by side with SoundSwitch.
-- **The image is mirrored:** the bar side shows on image left, and the L I-beam on image right.
-- Photo Booth only refreshes while its window is visible. It pauses ("Click Photo Booth to resume") in the background.
+- **Since 2026-10-06: Ring "Dance floor" camera** on the back wall, facing the speakers. Its Live View runs in Chrome (account.ring.com) under the SoundSwitch window. Not mirrored: the L I-beam is on image left. Wide fisheye, night vision (black and white in the dark). Live View ends after about 5 minutes and needs Reconnect clicked - Claude can see Chrome but not click it.
+- Earlier: iPhone on a tripod on the centerline, about 1 ft behind C4, with the Continuity Camera feed in Photo Booth. That image is mirrored (bar side on image left). Photo Booth only refreshes while its window is visible.
+- A phone photo from the back of the room is the best check for overlap; the Ring fisheye squashes the far end of the floor.
 - To align or debug, take one white capture per fixture, or give each fixture a different color.
 
 ## Invert settings and Floor Center results
@@ -39,7 +38,7 @@
 |---|---|---|
 | Floor Center | Pool on the centerline, leading edge under C3 (pool center about Y 155). The shared target for every mover. | Camera-checked, physically fine-tuned |
 | Front of Floor | Centerline, roughly under C1 (Y about 251) | Camera-checked. Every mover lands within about a pool-width. |
-| Back of Floor | Centerline, roughly under C4 (Y about 59) | Calculated from geometry, not checked yet |
+| Back of Floor | Centerline, roughly under C4 (Y about 59) | Checked on the Ring camera 2026-10-06. Scan 110 tilt lowered (the L/R pairs were crossing past each other); spots tilted toward the ball. Fine-tune by eye still worth doing. |
 | Cross | L Scan 110s throw to the R half and R Scan 110s to the L half, so the beams make an X. The front bar swings across too. | Calculated from geometry, not checked yet |
 | Tiny Ball | The Pocket Beam on the tiny mirror ball | Pocket Beam aimed by Tony. The other movers are left at center. |
 | Lanes, Ball | Planned | - |
@@ -47,17 +46,19 @@
 The Pocket Beam is on the tiny ball (429, 509) in **every** position, so it always lights it.
 
 ## Crosshair values (Edit Positions grid, screen pixels)
-These were read off the grid on the MacBook's screen. The grid center is about (510, 404), and the grid spans about ±164 px. Use them as starting points, not DMX values.
+These were read off the grid on the MacBook's screen. The grid center is about (510, 404), and the grid spans about ±164 px. Use them as starting points, not DMX values. They are relative to the dialog's position: if the SoundSwitch window moves, shift them by the same amount (on 2026-10-06 the window sat 25 px lower, so every Y was +25).
 
 | Fixture | Floor Center | Front of Floor | Back of Floor | Cross |
 |---|---|---|---|---|
-| F1 Spot 1 (pan inv) | 522, 412 | 530, 395 | 519, 419 | 531, 412 |
-| F5 Spot 14 (pan inv) | 484, 405 | 474, 388 | 487, 412 | 475, 405 |
+| F1 Spot 1 (pan inv) | 522, 412 | 530, 395 | 519, 426 | 531, 412 |
+| F5 Spot 14 (pan inv) | 484, 405 | 474, 388 | 487, 419 | 475, 405 |
 | F2 Scan360 300 | 537, 383 | 537, 397 | 537, 368 | 560, 383 |
 | F4 Scan360 315 | 503, 404 | 503, 418 | 503, 389 | 480, 404 |
-| L1 / R1 (R pan inv) | 582, 345 | 495, 345 | 621, 345 | 582, 331 |
-| L2 / R2 (R pan inv) | 528, 345 | 446, 345 | 597, 345 | 528, 331 |
-| L3 / R3 (R pan inv) | 474, 345 | 414, 345 | 559, 345 | 474, 331 |
+| L1 / R1 (R pan inv) | 582, 345 | 495, 345 | 621, 363 | 582, 331 |
+| L2 / R2 (R pan inv) | 528, 345 | 446, 345 | 597, 357 | 528, 331 |
+| L3 / R3 (R pan inv) | 474, 345 | 414, 345 | 559, 349 | 474, 331 |
+
+Back of Floor lesson: the Scan 110 centerline tilt (Y 345) only holds for targets near the middle of the room. For targets far down the room the beam is longer, so the same tilt overshoots across the floor and the L and R pools pass each other. Lower the tilt the further along the room the target is (L1/R1 at Back of Floor needed about +18 px).
 | F Vortex 405 | center | center | center | center |
 | F Pocket Beam 27 | 429, 509 | 429, 509 | 429, 509 | 429, 509 |
 
