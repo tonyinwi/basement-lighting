@@ -31,3 +31,4 @@
 - **20:33** New "841 Logo" position: Spot 1 nearly straight down in front of the speakers.
 - **20:39** The logo wouldn't focus well on the floor, so Tony moved it onto the white wall behind the bar and focused it. It read upside down; the Spot 255 can't index gobo rotation, so a slow spin (Gobo Rotation 10) was added instead. Tony: "Perfect." Saved.
 - **20:46** Tony may turn the mini bar into a DJ booth. A Spot position on the mini bar is for later.
+- **20:51** "841" static look made in Bank 4 (row 2, slot 3): the spinning logo on its own, to switch on over any Autoloop. Saved.

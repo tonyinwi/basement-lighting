@@ -132,4 +132,5 @@ Identified 2026-10-06 from a slot-by-slot sweep Tony filmed, and matched to the 
 
 ## Calibration and show looks (Static Looks, Bank 4)
 - **CAL Test (slot 1):** includes every fixture. Used to isolate one fixture at a time. Last state: the Vortex at full with Barrel Rotation 65, everything else at 0.
+- **841 (row 2, slot 3):** Spot 1 only. White, full, 841 Logo position, Gobo Wheel 36 (841 logo), Gobo Rotation 10 (slow spin). Puts the spinning logo on the wall behind the bar. Switch it on over any Autoloop. Made 2026-10-06.
 - **Vortex Show (row 1, slot 4):** includes only the Vortex. Full brightness, Barrel Rotation 65 (medium spin), Show 134 (a built-in program). Tony likes it. Run it alongside the Autoloops.
