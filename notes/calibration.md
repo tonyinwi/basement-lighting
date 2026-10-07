@@ -42,22 +42,28 @@
 | Back of Floor | Centerline, roughly under C4 (Y about 59) | Checked on the Ring camera 2026-10-06. Scan 110 tilt lowered (the L/R pairs were crossing past each other); spots tilted toward the ball. Fine-tune by eye still worth doing. |
 | Cross | L Scan 110s throw to the R half and R Scan 110s to the L half, so the beams make an X. The front bar swings across too. | Checked on the Ring camera 2026-10-06 and widened: Scan 110 tilt raised 17 px, Spot pan spread 25 px more each way. Every pair now makes a clear X with two separate pools. |
 | Tiny Ball | The Pocket Beam on the tiny mirror ball | Pocket Beam aimed by Tony. The other movers are left at center. |
-| Lanes, Ball | Planned | - |
+| Lanes | Each Scan 110 throws straight across a short way, so its pool stays on its own side and the pools make two lanes down the sides. The front bar points down the centerline. | Checked with Tony's phone photo 2026-10-06. The first try (Scan 110 tilt Y 369 old frame) landed too close to the centerline; lowered 25 px (L3/R3 35 px). |
+| Ball | The big mirror ball at the back wall, by the left I-beam. Pocket Beam on the ball; the Saber (52) already lights it. Other movers stay at Floor Center. | Done 2026-10-06. Spot 255 beams are too wide for the ball (no iris, no tight-dot gobo), so the Spots stay at Floor Center. The first Pocket Beam aim was 180° off (it hit the block wall beside it); after swinging the pan 180°, Tony dragged it onto the ball himself. The little ball still lines up perfectly in the other positions. |
+| 841 Logo | Spot 1 with the custom 841 gobo (value 36), nearly straight down on the floor right in front of the speakers, center, by the Shocker. A steep throw keeps the logo from stretching. Tony sets the focus by hand. | Created 2026-10-06. Spot 1 first aim (552, 386 new frame) came from the geometry and landed a bit too close to the speakers; Tony is dragging it toward the back himself. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
 
 The Pocket Beam is on the tiny ball (429, 509) in **every** position, so it always lights it.
 
 ## Crosshair values (Edit Positions grid, screen pixels)
 These were read off the grid on the MacBook's screen. The grid center is about (510, 404), and the grid spans about ±164 px. Use them as starting points, not DMX values. They are relative to the dialog's position: if the SoundSwitch window moves, shift them by the same amount (on 2026-10-06 the window sat 25 px lower, so every Y was +25).
 
-| Fixture | Floor Center | Front of Floor | Back of Floor | Cross |
-|---|---|---|---|---|
-| F1 Spot 1 (pan inv) | 522, 412 | 530, 395 | 519, 426 | 556, 411 |
-| F5 Spot 14 (pan inv) | 484, 405 | 474, 388 | 487, 419 | 449, 404 |
-| F2 Scan360 300 | 537, 383 | 537, 397 | 537, 368 | 560, 383 |
-| F4 Scan360 315 | 503, 404 | 503, 418 | 503, 389 | 480, 404 |
-| L1 / R1 (R pan inv) | 582, 345 | 495, 345 | 621, 363 | 582, 313 |
-| L2 / R2 (R pan inv) | 528, 345 | 446, 345 | 597, 357 | 528, 313 |
-| L3 / R3 (R pan inv) | 474, 345 | 414, 345 | 559, 349 | 474, 313 |
+All values below are in the old frame (grid center about 510, 404). In the 2026-10-06 window position, add 25 to every Y.
+
+| Fixture | Floor Center | Front of Floor | Back of Floor | Cross | Lanes |
+|---|---|---|---|---|---|
+| F1 Spot 1 (pan inv) | 522, 412 | 530, 395 | 519, 426 | 556, 411 | 498, 395 |
+| F5 Spot 14 (pan inv) | 484, 405 | 474, 388 | 487, 419 | 449, 404 | 506, 388 |
+| F2 Scan360 300 | 537, 383 | 537, 397 | 537, 368 | 560, 383 | 520, 397 |
+| F4 Scan360 315 | 503, 404 | 503, 418 | 503, 389 | 480, 404 | 520, 418 |
+| L1 / R1 (R pan inv) | 582, 345 | 495, 345 | 621, 363 | 582, 313 | 510, 393 |
+| L2 / R2 (R pan inv) | 528, 345 | 446, 345 | 597, 357 | 528, 313 | 510, 393 |
+| L3 / R3 (R pan inv) | 474, 345 | 414, 345 | 559, 349 | 474, 313 | 510, 403 |
+
+Ball uses the Floor Center values for every mover except the Pocket Beam (first aim 561, 512, not yet confirmed on the ball).
 
 Back of Floor lesson: the Scan 110 centerline tilt (Y 345) only holds for targets near the middle of the room. For targets far down the room the beam is longer, so the same tilt overshoots across the floor and the L and R pools pass each other. Lower the tilt the further along the room the target is (L1/R1 at Back of Floor needed about +18 px).
 | F Vortex 405 | center | center | center | center |
@@ -77,7 +83,9 @@ Back of Floor lesson: the Scan 110 centerline tilt (Y 345) only holds for target
 - **Pocket Beam (moving head, upright):**
   - Center = straight up.
   - Down on the grid tilts it toward the seating.
-  - With that tilt, moving right swung it toward the back wall, so left swings it the other way.
+  - Pan is about 0.6 px per degree, so **108 px of pan = 180°**. With the head tilted down about 90° (Y about 108 px below center), right of center at X 561 pointed at the block wall beside it, and X 452 swung it around toward the big ball at the back wall.
+  - Small physical or software tweaks barely move it on the little ball (close by) but decide whether it hits the big ball 28 ft away.
+- **Positions vs physical aim:** a position stores pan/tilt relative to the fixture's mount. Turning a fixture by hand shifts every position for that light, and the far targets move most. Physical aiming is right for a light's first position and small trims, followed by a check of its other positions. Driving the dot in Edit Positions changes only that one position.
 - **Vortex (moonflower):** there's nothing to aim. Pan just turns the barrel.
 
 ## Autoloop position cues (Bank 1)
@@ -95,6 +103,26 @@ Added 2026-10-06. Before this, the stock Autoloops had no working position cues,
 | 8 | bars 1/5/9/13: Back, Cross, Front, FC |
 
 Banks 2-4 have no position cues yet.
+
+## Spot 255 gobo wheel (F1 Spot 1)
+Identified 2026-10-06 from a slot-by-slot sweep Tony filmed. The SoundSwitch Gobo Wheel attribute takes raw DMX (0-255), and each slot is about 8 values wide, so use the middle of a range.
+
+| Value | Gobo | Tony's take |
+|---|---|---|
+| 0-7 (use 4) | Open | |
+| 12 | Pink dot ring (colored glass, 8 dots in a ring) | Useful, and it can overlap with the other spot |
+| 20 | Shattered / breakup | |
+| 28 | Swirl (3-arm galaxy) | |
+| 36 | **841 logo** - custom, the basement's nickname. Spot 1 only. | Signature piece. Needs a steep throw and a manual focus. |
+| 44 | Rose / spiral rings | |
+| 52 | Diamond grid | |
+| 60 | Dense dot field | |
+| 64-70+ | Shake | Not useful |
+
+- An earlier quick pass seemed to show 10 = open. The slot-by-slot sweep is the one to trust.
+- None of the gobos gives a tight single dot, so the big ball needs the Pocket Beam, the Saber, or a new LED pinspot.
+- Gobo Rotation can stand the 841 logo upright.
+- Spot 14's wheel hasn't been checked; it doesn't have the 841 gobo.
 
 ## Calibration and show looks (Static Looks, Bank 4)
 - **CAL Test (slot 1):** includes every fixture. Used to isolate one fixture at a time. Last state: the Vortex at full with Barrel Rotation 65, everything else at 0.

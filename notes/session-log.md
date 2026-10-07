@@ -25,3 +25,7 @@
 - **18:50** Ring "Dance floor" camera mounted on the back wall; its Live View in Chrome replaces the iPhone/Photo Booth feed (not mirrored; night vision; Live View times out every ~5 min and needs Reconnect clicked). Claude can only view Chrome, not click it.
 - **19:08** Back of Floor checked: L1/R1 and L2/R2 were crossing past each other, so their tilt was lowered; L3 small trim; front-bar Spots tilted toward the ball; Scan 360s land together. Saved.
 - **19:55** Ring Live View moved to Claude's built-in browser so Claude can reconnect it. Cross checked pair by pair (L1/R1, L2/R2, Spots, Scan 360s) and widened into a proper X with separate pools. L3 got the same change as L2 but wasn't checked alone. Saved.
+- **~20:10** Lanes position made and checked with Tony's phone photos (first try too close to the centerline; Scan 110 tilt lowered). Saved. Tony: target music is dance, tech house and 80s.
+- **~20:15** Ball: the Spot beam is too wide for the big ball and there's no iris. Gobo sweep on Spot 1, filmed by Tony: 7 gobos plus open, including the custom **841 logo** at value 36 (the basement's nickname, Spot 1 only). No tight-dot gobo. Shopping idea: another LED pinspot for the ball.
+- **20:28** Pocket Beam Ball aim was 180° off. Swung the pan 180° in software, then Tony dragged it onto the big ball himself. Little ball still perfect. Saved.
+- **20:33** New "841 Logo" position: Spot 1 nearly straight down in front of the speakers. Tony is dragging it toward the back and will focus it by hand.

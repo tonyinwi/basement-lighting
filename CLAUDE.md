@@ -6,7 +6,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - **Ask before anything risky or hard to undo.** That includes deleting fixtures or looks, Options > Update Fixtures, Reset Default Autoloops, and Export to Control One.
 - **Save after every fixture:** press OK, then File > Save Project. **Saving only works in Edit mode.** In Perform mode the File menu has no Save, and "Import from Control One" sits where Save would be. Don't click it.
 - **Static Look Bank 4 is Claude's** for tests and calibration. Bank 1 Autoloops can be overwritten, since Tony will rebuild all the Autoloops anyway.
-- **Tony moves fixtures by hand, and only left/right and up/down.** Everything else is done in software.
+- **Tony moves fixtures by hand, and only left/right and up/down.** Everything else is done in software. When he says he'll "point it" or "move it", he usually means dragging the dot in SoundSwitch himself. Hand him the steps and keep off the Mac until he says done.
 - Give directions by **DMX address**. Number and list fixtures **from the front (speakers)**. Describe the room **as seen from the back**, facing the speakers.
 - Use regular hyphens in writing, not em dashes.
 - After each session, update the notes and `notes/session-log.md`, then commit.
@@ -17,7 +17,9 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - Floor Center and Front of Floor are camera-checked.
   - Tiny Ball has only the Pocket Beam aimed.
   - Back of Floor and Cross are camera-checked (2026-10-06). Cross is now a wide X with separate pools.
-  - The Pocket Beam sits on the tiny ball in every position.
+  - Lanes and Ball are done (2026-10-06). In Ball the Pocket Beam lights the big ball; it sits on the tiny ball in every other position.
+  - "841 Logo" (Spot 1 only, custom 841 gobo at value 36) is being aimed. Don't use it in Autoloops.
+  - Spot 1 gobo map: `notes/calibration.md`.
 - **Autoloops:**
   - All 8 in Bank 1 now have position cues, so their movers move.
   - Banks 2-4 still have no position cues.
@@ -28,7 +30,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-1. Add the Lanes and Ball (big mirror ball) positions.
+1. Finish the 841 Logo position (Tony aims and focuses), and build an "841" static look around it. Set up the Pocket Beam the same way.
 2. Check L3 171 alone at Back of Floor and Cross.
 3. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
 4. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:
@@ -46,6 +48,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
    - Repair R3 204 (it's already programmed).
    - Fix the hazer's DMX.
    - Re-add one Pocket Roll.
+   - Consider another LED pinspot (or a pinhole gobo) for the big ball.
    - Measure where the tiny ball and the Fog Fury are, and add them to the 3D model.
    - Track down the idle glow on the Vortex and the Scan 110s.
 7. Back up `Claude.ssproj` and the custom Fixture Manager profile ("Intimidator Scan 360 Rev 2 tony") into this repo.
