@@ -44,7 +44,8 @@
 | Tiny Ball | The Pocket Beam on the tiny mirror ball | Pocket Beam aimed by Tony. The other movers are left at center. |
 | Lanes | Each Scan 110 throws straight across a short way, so its pool stays on its own side and the pools make two lanes down the sides. The front bar points down the centerline. | Checked with Tony's phone photo 2026-10-06. The first try (Scan 110 tilt Y 369 old frame) landed too close to the centerline; lowered 25 px (L3/R3 35 px). |
 | Ball | The big mirror ball at the back wall, by the left I-beam. Pocket Beam on the ball; the Saber (52) already lights it. Other movers stay at Floor Center. | Done 2026-10-06. Spot 255 beams are too wide for the ball (no iris, no tight-dot gobo), so the Spots stay at Floor Center. The first Pocket Beam aim was 180° off (it hit the block wall beside it); after swinging the pan 180°, Tony dragged it onto the ball himself. The little ball still lines up perfectly in the other positions. |
-| 841 Logo | Spot 1 with the custom 841 gobo (value 36) on the white block wall behind the bar. | Created 2026-10-06. The plan was the floor in front of the speakers, but the logo wouldn't focus well on the floor, so Tony aimed it at the bar's back wall himself, where it's big and readable. It projects upside down, so the gobo needs turning 180° in its holder. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
+| 841 Logo | Spot 1 with the custom 841 gobo (value 36) on the white block wall behind the bar, spinning slowly (Gobo Rotation 10, about one turn every 9 s). | Done 2026-10-06; Tony: "Perfect." The plan was the floor in front of the speakers, but the logo wouldn't focus well on the floor, so Tony aimed it at the bar's back wall himself and focused it. Spot 1 crosshair: 578, 471 (old frame). The slow spin means it reads upright once per turn; to hold it still and upright, turn the gobo 180° in its holder. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
+| (idea) Mini bar | A Spot on the mini bar. Tony may turn the mini bar into a DJ booth, which would change what this position should light. | Later |
 
 The Pocket Beam is on the tiny ball (429, 509) in **every** position, so it always lights it.
 
@@ -122,7 +123,8 @@ Identified 2026-10-06 from a slot-by-slot sweep Tony filmed, and matched to the 
 | 128-191 / 192-255 | Wheel cycle / reverse cycle, speeding up | |
 
 - **Gobo Rotation** (ch 8): 0-7 off, 8-119 spin, 120-231 reverse spin, 232-255 bounce. **There's no indexing** (no fixed angles), so the channel can't hold the logo upright.
-- **The 841 logo projects upside down** on the bar's back wall (2026-10-06 photo). The fix is physical: unplug the fixture, open the gobo access cover, pull the 841 holder, and turn the gobo 180° in it. Turn it; don't flip it over, or the text mirrors. The full steps are in the Chauvet manual.
+- **Gobo Rotation 10** (near the slow end) turns the 841 logo about once every 9 s. Tony liked it.
+- **The 841 logo projects upside down** on the bar's back wall when it isn't spinning (2026-10-06 photo). The fix is physical: unplug the fixture, open the gobo access cover, pull the 841 holder, and turn the gobo 180° in it. Turn it; don't flip it over, or the text mirrors. The full steps are in the Chauvet manual.
 - An earlier quick pass seemed to show 10 = open. The slot-by-slot sweep and the manual are the ones to trust.
 - None of the gobos gives a tight single dot, so the big ball needs the Pocket Beam, the Saber, or a new LED pinspot.
 - Spot 14's wheel hasn't been checked; it doesn't have the 841 gobo.

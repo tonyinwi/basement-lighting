@@ -28,4 +28,6 @@
 - **~20:10** Lanes position made and checked with Tony's phone photos (first try too close to the centerline; Scan 110 tilt lowered). Saved. Tony: target music is dance, tech house and 80s.
 - **~20:15** Ball: the Spot beam is too wide for the big ball and there's no iris. Gobo sweep on Spot 1, filmed by Tony: 7 gobos plus open, including the custom **841 logo** at value 36 (the basement's nickname, Spot 1 only). No tight-dot gobo. Shopping idea: another LED pinspot for the ball.
 - **20:28** Pocket Beam Ball aim was 180° off. Swung the pan 180° in software, then Tony dragged it onto the big ball himself. Little ball still perfect. Saved.
-- **20:33** New "841 Logo" position: Spot 1 nearly straight down in front of the speakers. Tony is dragging it toward the back and will focus it by hand.
+- **20:33** New "841 Logo" position: Spot 1 nearly straight down in front of the speakers.
+- **20:39** The logo wouldn't focus well on the floor, so Tony moved it onto the white wall behind the bar and focused it. It read upside down; the Spot 255 can't index gobo rotation, so a slow spin (Gobo Rotation 10) was added instead. Tony: "Perfect." Saved.
+- **20:46** Tony may turn the mini bar into a DJ booth. A Spot position on the mini bar is for later.

@@ -18,7 +18,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - Tiny Ball has only the Pocket Beam aimed.
   - Back of Floor and Cross are camera-checked (2026-10-06). Cross is now a wide X with separate pools.
   - Lanes and Ball are done (2026-10-06). In Ball the Pocket Beam lights the big ball; it sits on the tiny ball in every other position.
-  - "841 Logo" (Spot 1 only, custom 841 gobo at value 36) is being aimed. Don't use it in Autoloops.
+  - "841 Logo" is done: Spot 1 throws the custom 841 gobo (value 36) onto the wall behind the bar, with a slow spin (Gobo Rotation 10). It aims Spot 1 only, so don't use it in Autoloops.
   - Spot 1 gobo map: `notes/calibration.md`.
 - **Autoloops:**
   - All 8 in Bank 1 now have position cues, so their movers move.
@@ -30,7 +30,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-1. Finish the 841 Logo position (Tony aims and focuses), and build an "841" static look around it. Set up the Pocket Beam the same way.
+1. Build an "841" static look in Bank 4 (Spot 1 white, full, 841 Logo position, gobo 36, rotation 10), so the logo can be switched on alongside an Autoloop. Later, a Spot position on the mini bar, which Tony may turn into a DJ booth.
 2. Check L3 171 alone at Back of Floor and Cross.
 3. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
 4. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:
