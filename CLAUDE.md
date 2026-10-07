@@ -33,7 +33,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 
 ## Next up
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
-2. **DJ booth:** now set up at the front of the dance floor, stage right (Tony's words; if he means the performer's right, that's the left side seen from the back - confirm). Tony will check whether he has a second 841 gobo; if so, put it in a Spot and project the logo onto the booth. Also add a Spot position for the booth.
+2. **DJ booth:** now set up at the front of the dance floor, on the **left as seen from the back** (Tony's "stage right": his right when standing behind the front bar facing the room). Tony will check whether he has a second 841 gobo; if so, put it in a Spot and project the logo onto the booth. Also add a Spot position for the booth.
 3. Check L3 171 alone at Back of Floor and Cross.
 4. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
 5. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:

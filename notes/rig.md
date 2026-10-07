@@ -12,7 +12,7 @@ Units are inches. X is measured from the left I-beam, Y from the mirror-ball wal
 | Centerline | X 93.5", the Tripar line. Everything centers on it. |
 | Mirror ball | 16" ball, top at 79", 12" off the left I-beam, at the back wall |
 | Front bar | 16" (1'4") off the speaker wall (Y 362), bottom at 80" (6'8") |
-| DJ booth | Moved 2026-10-06: now at the front of the dance floor, stage right (see the note below). Earlier it sat off to the side. |
+| DJ booth | Moved 2026-10-06: now at the front of the dance floor, on the left seen from the back (see the note below). Earlier it sat off to the side. |
 
 ## Fixtures (Universe 1)
 Listed from the front (speakers) toward the back.
@@ -43,7 +43,7 @@ Listed from the front (speakers) toward the back.
 
 **Other details:**
 - All Scan 110s hang at 6'7". They are spaced about 5' (60") apart along each beam.
-- **DJ booth (2026-10-06):** set up at the front of the dance floor, stage right (Tony's words). Not measured yet. It replaces the earlier idea of using the mini bar.
+- **DJ booth (2026-10-06):** set up at the front of the dance floor, on the **left as seen from the back**. Tony calls it "stage right": his right when standing behind the front bar (the lighting bar) facing the room, so the left as seen from the lounge. Not measured yet. It replaces the earlier idea of using the mini bar.
 - **Tiny mirror ball:** sits in front of the Fog Fury and is lit by the Pocket Beam. Its exact position hasn't been measured yet.
 
 **Not patched:**
