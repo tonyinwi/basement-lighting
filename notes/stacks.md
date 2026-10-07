@@ -84,3 +84,14 @@ All 8 are 16 bars. The Pocket Beam sits on the tiny ball in every position used 
 - Steady intensity levels (everything breathes or pulses for now).
 - Whether the group-level zero overrides really black out every member light.
 - Movement sizes on the Spots and Scan 360s.
+
+## What got built (Bank 2, 80s, in Claude-2330.ssproj)
+Bank 2 ("Upbeat") now starts with three 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
+
+| Slot | Name | Palette | What it does |
+|---|---|---|---|
+| 1 | 80s 1 Neon Sign | Hot magenta + cyan | Tripars hot magenta, breathing. Mega64 magenta on the speaker wall. Both Scan 360s cyan. Spots magenta, easing from Front of Floor to Floor Center. Balls on. |
+| 2 | 80s 2 Roller Rink | Warm amber + sparkle | Tripars warm amber (255/140/40), breathing. Saber warm white on the big ball, Pocket Beam on the tiny ball. Everything else dark. |
+| 3 | 80s 3 Miami | Pink + teal | Main Track teal; C1 and C3 hot pink, so the spine alternates pink and teal front to back. Spots magenta, easing from Front of Floor to Floor Center. Balls on. |
+
+Still to build: Swirl (purple + swirl gobo), Sunset Strip (orange + pink dot ring), and Vortex Party, which waits on the Vortex color profile.
