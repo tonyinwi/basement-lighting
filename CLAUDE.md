@@ -16,6 +16,8 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - **Slow color changes.** The stock Autoloops changed color far too fast.
 - **Respect the color wheels.** Wheel fixtures (Spots, Scan 360s, Vortex) should hold a color, not spin through the wheel.
 - Movement and intensity can breathe with the music. The color and the character of the look stay put for the whole loop.
+- **Program in stacks.** A bank is a stack of looks that flow well into each other, like Bank 1 = one stack. Order them so each one transitions nicely to the next.
+- **Keep genres apart.** Dance/tech house (EDM) and 80s are separate stacks in separate banks. Never plan a transition between them.
 - **Design in space, not all-on.** Think about how each light reads in the room next to the others. Use lights on their own or in small groups: a lone beam, just the I-beam scans, only the front bar. Don't run everything all the time. Leave darkness and contrast, and look for clever single-light moments.
 
 ## Current state (2026-10-06)
