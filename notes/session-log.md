@@ -42,3 +42,4 @@
 - **22:11** Demo set up: Bank 1 Autoloops plus Mirror Ball, 841 and Vortex Show.
 - **22:15** Tony: pressing Black leaves the Vortex running during Vortex Show.
 - **22:23** Tony's Autoloop feedback: color changes are too fast; respect the color wheels; build "active looks" (one look, one color, one feeling) instead of animations. Now in `CLAUDE.md`.
+- **22:24** Tony: consider how each light looks in space with the others; use lights individually and cleverly instead of everything on all the time. Added to `CLAUDE.md`.

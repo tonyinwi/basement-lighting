@@ -16,6 +16,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - **Slow color changes.** The stock Autoloops changed color far too fast.
 - **Respect the color wheels.** Wheel fixtures (Spots, Scan 360s, Vortex) should hold a color, not spin through the wheel.
 - Movement and intensity can breathe with the music. The color and the character of the look stay put for the whole loop.
+- **Design in space, not all-on.** Think about how each light reads in the room next to the others. Use lights on their own or in small groups: a lone beam, just the I-beam scans, only the front bar. Don't run everything all the time. Leave darkness and contrast, and look for clever single-light moments.
 
 ## Current state (2026-10-06)
 - **Patch:** validated and named. Groups are set: a pair shares a group, and a one-off gets its own. Full table in `notes/rig.md`.
