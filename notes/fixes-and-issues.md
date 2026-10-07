@@ -12,6 +12,7 @@
 - **Vortex was stuck on one look.** The "Vortex Show" static look runs its built-in program instead.
 
 ## Open issues
+- **Black doesn't stop the Vortex (2026-10-06 demo).** With Vortex Show on, pressing Black on the Control One leaves the Vortex running. Likely cause: Vortex Show runs the fixture's built-in program (ch 7, Show 134), which seems to ignore the dimmer that Black pulls to 0. Ideas: once the Vortex has a color wheel in its profile, drive it from the Autoloops and Static Looks instead of its built-in show; or test whether Black also zeroes the shutter channel.
 - **SoundSwitch froze after a save (2026-10-06 21:08)** with the Edit-mode File menu drawn open. Force Quit and relaunch fixed it, and nothing saved was lost.
 - **The Vortex can't be colored by the Autoloops.** Its SoundSwitch profile exposes no color channels (the Color cell in Static Looks is blank). Barrel Rotation, Show and Reflector Rotation are attributes, and the Autoloops never animate them. To fix:
   - Map its color channels in Fixture Manager.

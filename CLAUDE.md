@@ -32,6 +32,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
+0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
 2. **DJ booth:** now set up at the front of the dance floor, on the **left as seen from the back** (Tony's "stage right": his right when standing behind the front bar facing the room). Spot 1 can't aim at the booth (tried 2026-10-06). Tony will check whether he has a second 841 gobo; if so, it needs a fixture that can reach the booth (Spot 14 is worth testing first). An unused "DJ Booth" position and an empty look "99" (Bank 4, row 3 slot 1) are left over from the attempt and aren't saved yet.
 3. Check L3 171 alone at Back of Floor and Cross.
