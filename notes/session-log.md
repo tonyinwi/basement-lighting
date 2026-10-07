@@ -37,3 +37,4 @@
 - **21:08** After the save, SoundSwitch stopped responding with the Edit-mode File menu open on screen. Left it alone (Import and Export to Control One sit in that menu) and asked Tony to check.
 - **21:14** Tony force-quit and reopened SoundSwitch. Everything saved came back (Bank 4: CAL Test, Vortex Show, 841, Mirror Ball). The window now opens larger, so screen coordinates moved.
 - **21:14** The DJ booth is now set up at the front of the dance floor, on the left seen from the back (Tony's "stage right", standing behind the front bar). To-do: check for a second 841 gobo to project onto it.
+- **21:21** Tried a second 841 look on the DJ booth with Spot 1. Spot 1 can't aim there, so it was aborted. Left behind, unsaved: a "DJ Booth" position (Cancel doesn't remove a new position) and an empty look "99".

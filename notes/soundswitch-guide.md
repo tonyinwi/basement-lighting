@@ -73,6 +73,7 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
   - The fixture list has the P/T invert toggles. The Position list has **+** to add a position, and you double-click a position to rename it. A new position starts with every fixture at the grid center.
   - To aim: select the position, select the fixture, drag its dot, click **Apply**, then **OK**. **OK is what sends the move to the light.**
   - **Live preview:** while the Positions window is open, clicking a position in its list moves every mover to that position live, and dragging a dot moves that light live. Closing the window sends each fixture back to the position picked in its look's dropdown. So Tony may see lights jump around while positions are edited.
+  - **Cancel doesn't undo +:** a position added with + stays in the list even if you Cancel the Positions window.
   - **Stacked dots:** a new position puts every fixture at grid center. A drag grabs the topmost dot there, whichever fixture row is selected. Move dots one at a time and check which fixture got selected.
   - The Position dropdown in a look lists THRU, the positions in creation order, and any new one at the bottom.
 - **Typing an attribute value:** double-click the number next to an attribute slider (for example Gobo Wheel), press Cmd-A, type the value, then Return. That's more precise than the short slider, which runs 0-255.
