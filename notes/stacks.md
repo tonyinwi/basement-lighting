@@ -9,6 +9,19 @@ Built from Tony's direction on 2026-10-06 (see `CLAUDE.md`, "How Tony wants Auto
 
 Status: **draft plan**. What actually got built, and how, is at the bottom.
 
+## References Tony likes
+- **Mau P** (tech house): hard red and white, strobe hits on the drops, lots of darkness between hits; bouncy and cheeky. Sets: [Club Space Terrace](https://www.youtube.com/watch?v=cfaHNv3VLo4), [Under the K Bridge, 4-hour set](https://www.youtube.com/watch?v=1SLZ9M-bH-Y), [EDC Las Vegas 2024](https://www.youtube.com/watch?v=RhouHtUGFT8)
+- **Carl Cox** (techno/house): big, warm and euphoric. White and amber beams, long builds, open fans, a few huge moments. Sets: [Space Ibiza closing 2016](https://www.youtube.com/watch?v=Dsp0o3N1lKM), [Boiler Room Ibiza](https://www.youtube.com/watch?v=vy-k0FopsmY)
+- **Claude can't watch video.** Screenshots or short phone clips from sets Tony likes can be analyzed frame by frame.
+
+## Lights as objects (Tony, 2026-10-06)
+Treat each light, or each pair, as a character that interacts with the others:
+- **Call and answer:** the I-beam Scan 110s answer the front-bar Spots, trading phrases.
+- **Handoff:** the beam or pool passes down the room from front to back.
+- **Mirroring:** L and R scans move toward and away from each other (Cross / Lanes).
+- **Convergence:** separate pools meet on Floor Center at the drop, then split.
+- **Solo:** one beam alone in haze.
+
 ## The room as an instrument
 | Layer | Lights | What it does in the room |
 |---|---|---|
