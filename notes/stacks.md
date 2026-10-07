@@ -85,8 +85,8 @@ All 8 are 16 bars. The Pocket Beam sits on the tiny ball in every position used 
 - Whether the group-level zero overrides really black out every member light.
 - Movement sizes on the Spots and Scan 360s.
 
-## What got built (Bank 2, 80s, in Claude-2330.ssproj)
-Bank 2 ("Upbeat") now starts with three 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
+## What got built (Bank 2, 80s, in Claude-0000.ssproj)
+Bank 2 ("Upbeat") now starts with five 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
 
 | Slot | Name | Palette | What it does |
 |---|---|---|---|
@@ -94,4 +94,10 @@ Bank 2 ("Upbeat") now starts with three 80s looks. Each is named "80s N ..." so 
 | 2 | 80s 2 Roller Rink | Warm amber + sparkle | Tripars warm amber (255/140/40), breathing. Saber warm white on the big ball, Pocket Beam on the tiny ball. Everything else dark. |
 | 3 | 80s 3 Miami | Pink + teal | Main Track teal; C1 and C3 hot pink, so the spine alternates pink and teal front to back. Spots magenta, easing from Front of Floor to Floor Center. Balls on. |
 
-Still to build: Swirl (purple + swirl gobo), Sunset Strip (orange + pink dot ring), and Vortex Party, which waits on the Vortex color profile.
+| 4 | 80s 4 Sunset Strip | Orange + pink | Main Track sunset orange (255/90/0); C1 and C3 hot pink. Spots pink, easing from Front of Floor to Floor Center. Balls on. |
+| 5 | 80s 5 Purple Swirl | Purple + lavender | Whole spine purple (120/0/255), breathing. Spots lavender (190/120/255), easing to Floor Center. Balls on. |
+
+Still to do for Bank 2:
+- **The swirl gobo on Purple Swirl** (Spot 1 gobo 28, slow rotation) isn't on yet. Gobo Change / Custom Cue attribute presets are global, so editing one could change other loops. That needs a check first.
+- **The pink dot-ring gobo** (12) on Sunset Strip: same reason.
+- **Vortex Party:** waits on the Vortex color profile.
