@@ -2,7 +2,7 @@
 
 Built from Tony's direction on 2026-10-06 (see `CLAUDE.md`, "How Tony wants Autoloops built"):
 - **A bank is a stack.** It's an ordered set of active looks, and each one hands off cleanly to the next.
-- **Each Autoloop is one look, one color, one feeling.** It's not an animation.
+- **Each Autoloop is one coordinated look with one feeling.** It can use a few colors that go together, but never random colors, and it's not an animation.
 - **Color changes are slow.** Wheel lights (Spots, Scan 360s, Vortex) hold their color.
 - **Small casts placed in space.** Leave darkness. Use single lights for moments.
 - **EDM and 80s never mix.** Bank 1 is EDM / tech house. Bank 2 is 80s.

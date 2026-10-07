@@ -12,7 +12,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - After each session, update the notes and `notes/session-log.md`, then commit.
 
 ## How Tony wants Autoloops built (his feedback after the 2026-10-06 demo)
-- **An Autoloop is an "active look": one look, one color, one feeling.** It's not an animation that cycles through things.
+- **An Autoloop is an "active look": a coordinated look with one feeling.** It can use more than one color, but the colors are chosen to go together (a palette), never random. It's not an animation that cycles through things.
 - **Slow color changes.** The stock Autoloops changed color far too fast.
 - **Respect the color wheels.** Wheel fixtures (Spots, Scan 360s, Vortex) should hold a color, not spin through the wheel.
 - Movement and intensity can breathe with the music. The color and the character of the look stay put for the whole loop.
