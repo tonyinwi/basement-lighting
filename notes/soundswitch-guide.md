@@ -87,6 +87,21 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Positions only used by static looks** (841 Logo, Tiny Ball) only need the lights in that look aimed. The rest can stay at center.
 - Not yet checked: whether an Autoloop can give one fixture its own position cue.
 
+## Building Autoloops by hand (learned 2026-10-06 night)
+- **Open:** press A, then double-click a slot. The timeline shows the Main Track at the bottom and a track for every fixture or group on the right. Collapse groups with their folder icon so the list fits.
+- **Wipe the stock loop:** right-click the Main Track > Select All, then Edit > Clear (Cmd-Backspace). Attribute cues (the small colored squares) stay; select one and press Backspace to remove it.
+- **Color:** drag-select a range on a lane (the colored strip is the color lane), then right-click > Apply Color or Apply Color Transition. Type R/G/B in the picker, then Apply.
+- **Intensity effects:** drag-select a range, then **double-click** the effect in Effects > Intensity. Dragging the effect onto the track is unreliable. A dialog asks for depth (minimum 10%) and beat length (1/32 to 1 bar).
+  - **Smooth Pulse** is 0 on each beat and peaks between beats, so at 1/4 it lands on the **offbeat** (the hats).
+  - **Flash And Fade** at 1/4 hits **on the beat** (the kick) and decays.
+  - On a group track, a prompt asks "Selected Tracks" or "Group". **Group** writes the effect onto every member track.
+- **Make a light go dark:** select a range on its track, then press **Shift+O** (Create Intensity Override). That gives a flat 0 line, which overrides the Main Track. An empty track inherits the Main Track, which is why stock loops look all-on.
+- **Remove an override:** select the range and press **Shift+Cmd+Delete**. That clears the track's data and overrides, so it inherits again.
+- **Positions:** drag a position from the Positions panel onto the lane just above the bar ruler.
+- **Rename / Delete / Duplicate:** right-click the Autoloop slot. Duplicate fails when all 128 slots are full, so delete a stock loop first. Deleting shifts every later loop up one slot across banks. A duplicate lands in the last slot; drag it to where you want it.
+- **Save:** Cmd-S saves the project in Edit mode, and the "Saving Project / Completed" dialog confirms it.
+- **Still to figure out:** setting a steady, non-pulsing level (the override line wouldn't drag), and per-group position cues (Shift+P).
+
 ## Autoloops
 - **Perform > Autoloops:** banks 1-4 with 8 each, Play All Banks, Previous / Repeat / Next, Override Scripted Tracks, Sequential / Random. Click a bank header to play that bank, or click an Autoloop to start there.
 - **They need a beat source:** music in Virtual DJ (OS2L), or the BPM Detection toggle (top left) listening to the room.

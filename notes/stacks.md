@@ -66,5 +66,11 @@ Neon, mirror balls, warm sunsets and gobos. No tech-house red or white beams.
 2. Hazer: the beams need haze, and the hazer's DMX doesn't work. Run it by hand during shows?
 3. The lounge WiFLY: steady low color matching each look, or keep it out of the stacks?
 
-## What got built
-(Filled in during the build.)
+## What got built (Claude-2230.ssproj, Bank 1)
+| Slot | Name | What it does now |
+|---|---|---|
+| 1 | Blue Hour | Main Track blue with a slow 1-bar breath (67%). Saber warm white (255/170/80) on the big ball, breathing with the room. Pocket Beam breathing on the tiny ball (Tiny Ball position). Vortex, Shocker, Spots, Scan 110s, Scan 360s and Mega64 at 0. |
+| 2 | Scissors | Blue breath on the Tripars and Mega64. Both Scan 360s cyan. Scan 110s white. Positions: Lanes at bar 1, Cross at bar 9 (scans open and close). Saber, Spots, Vortex and Shocker at 0. |
+| 3 | Cherry Bounce | Main Track red with Flash And Fade on every kick (Tripars and the tiny ball). Scan 110s white with Smooth Pulse peaking on the offbeats. Lanes, then Cross at bar 9. Scan 360s, Spots, Mega64, Saber, Vortex and Shocker at 0. |
+| 4 | Call and Answer | Red kick on the floor. The Spots (red) flash on the kick in bars 1-2, 5-6, 9-10 and 13-14. The Scan 110s answer on the offbeat in bars 3-4, 7-8, 11-12 and 15-16, dropping to 10% in between. Lanes, then Cross at bar 9. |
+| 5-8 | (stock, not yet replaced) | |
