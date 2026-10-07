@@ -78,6 +78,14 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Typing an attribute value:** double-click the number next to an attribute slider (for example Gobo Wheel), press Cmd-A, type the value, then Return. That's more precise than the short slider, which runs 0-255.
 - **Active Static Looks panel:** the eye icon toggles a look. **Clear all** turns every static look off. An active static look overrides the Autoloops on the fixtures it includes.
 
+## How positions, looks and Autoloops fit together
+- **A named position stores one aim for every mover**, like a snapshot. A new position starts every mover at grid center.
+- **Static looks pick a position per fixture** (the Position dropdown on each row), and only the fixtures ticked in the look are touched. So looks can mix positions and be layered.
+- **An active static look overrides the Autoloop only for the fixtures it includes.** Everything else keeps following the Autoloop. Example: "841" takes over Spot 1 while the Autoloop runs the rest.
+- **An Autoloop position cue on the Main Track sends every mover to that position at once.** So any position an Autoloop uses needs a sensible aim for every mover. That's why the Pocket Beam sits on the tiny ball in Floor Center, Front, Back, Cross and Lanes.
+- **Positions only used by static looks** (841 Logo, Tiny Ball) only need the lights in that look aimed. The rest can stay at center.
+- Not yet checked: whether an Autoloop can give one fixture its own position cue.
+
 ## Autoloops
 - **Perform > Autoloops:** banks 1-4 with 8 each, Play All Banks, Previous / Repeat / Next, Override Scripted Tracks, Sequential / Random. Click a bank header to play that bank, or click an Autoloop to start there.
 - **They need a beat source:** music in Virtual DJ (OS2L), or the BPM Detection toggle (top left) listening to the room.
