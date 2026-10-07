@@ -24,3 +24,4 @@
 - **17:55** Repo created from the session notes.
 - **18:50** Ring "Dance floor" camera mounted on the back wall; its Live View in Chrome replaces the iPhone/Photo Booth feed (not mirrored; night vision; Live View times out every ~5 min and needs Reconnect clicked). Claude can only view Chrome, not click it.
 - **19:08** Back of Floor checked: L1/R1 and L2/R2 were crossing past each other, so their tilt was lowered; L3 small trim; front-bar Spots tilted toward the ball; Scan 360s land together. Saved.
+- **19:55** Ring Live View moved to Claude's built-in browser so Claude can reconnect it. Cross checked pair by pair (L1/R1, L2/R2, Spots, Scan 360s) and widened into a proper X with separate pools. L3 got the same change as L2 but wasn't checked alone. Saved.

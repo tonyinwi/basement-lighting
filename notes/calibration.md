@@ -9,7 +9,8 @@
 6. Switch to Edit mode and **File > Save Project**. Do this after every fixture.
 
 ## Camera setup
-- **Since 2026-10-06: Ring "Dance floor" camera** on the back wall, facing the speakers. Its Live View runs in Chrome (account.ring.com) under the SoundSwitch window. Not mirrored: the L I-beam is on image left. Wide fisheye, night vision (black and white in the dark). Live View ends after about 5 minutes and needs Reconnect clicked - Claude can see Chrome but not click it.
+- **Since 2026-10-06: Ring "Dance floor" camera** on the back wall, facing the speakers. Not mirrored: the L I-beam is on image left. Wide fisheye, night vision (black and white in the dark). Live View ends after about 5 minutes.
+- **Watch it in Claude's built-in browser** (account.ring.com, already signed in): find the "Dance floor" Go Live button and click it, then take screenshots of the browser pane. Claude can restart Live View itself there. In Chrome, Claude can only look, not click.
 - Earlier: iPhone on a tripod on the centerline, about 1 ft behind C4, with the Continuity Camera feed in Photo Booth. That image is mirrored (bar side on image left). Photo Booth only refreshes while its window is visible.
 - A phone photo from the back of the room is the best check for overlap; the Ring fisheye squashes the far end of the floor.
 - To align or debug, take one white capture per fixture, or give each fixture a different color.
@@ -39,7 +40,7 @@
 | Floor Center | Pool on the centerline, leading edge under C3 (pool center about Y 155). The shared target for every mover. | Camera-checked, physically fine-tuned |
 | Front of Floor | Centerline, roughly under C1 (Y about 251) | Camera-checked. Every mover lands within about a pool-width. |
 | Back of Floor | Centerline, roughly under C4 (Y about 59) | Checked on the Ring camera 2026-10-06. Scan 110 tilt lowered (the L/R pairs were crossing past each other); spots tilted toward the ball. Fine-tune by eye still worth doing. |
-| Cross | L Scan 110s throw to the R half and R Scan 110s to the L half, so the beams make an X. The front bar swings across too. | Calculated from geometry, not checked yet |
+| Cross | L Scan 110s throw to the R half and R Scan 110s to the L half, so the beams make an X. The front bar swings across too. | Checked on the Ring camera 2026-10-06 and widened: Scan 110 tilt raised 17 px, Spot pan spread 25 px more each way. Every pair now makes a clear X with two separate pools. |
 | Tiny Ball | The Pocket Beam on the tiny mirror ball | Pocket Beam aimed by Tony. The other movers are left at center. |
 | Lanes, Ball | Planned | - |
 
@@ -50,13 +51,13 @@ These were read off the grid on the MacBook's screen. The grid center is about (
 
 | Fixture | Floor Center | Front of Floor | Back of Floor | Cross |
 |---|---|---|---|---|
-| F1 Spot 1 (pan inv) | 522, 412 | 530, 395 | 519, 426 | 531, 412 |
-| F5 Spot 14 (pan inv) | 484, 405 | 474, 388 | 487, 419 | 475, 405 |
+| F1 Spot 1 (pan inv) | 522, 412 | 530, 395 | 519, 426 | 556, 411 |
+| F5 Spot 14 (pan inv) | 484, 405 | 474, 388 | 487, 419 | 449, 404 |
 | F2 Scan360 300 | 537, 383 | 537, 397 | 537, 368 | 560, 383 |
 | F4 Scan360 315 | 503, 404 | 503, 418 | 503, 389 | 480, 404 |
-| L1 / R1 (R pan inv) | 582, 345 | 495, 345 | 621, 363 | 582, 331 |
-| L2 / R2 (R pan inv) | 528, 345 | 446, 345 | 597, 357 | 528, 331 |
-| L3 / R3 (R pan inv) | 474, 345 | 414, 345 | 559, 349 | 474, 331 |
+| L1 / R1 (R pan inv) | 582, 345 | 495, 345 | 621, 363 | 582, 313 |
+| L2 / R2 (R pan inv) | 528, 345 | 446, 345 | 597, 357 | 528, 313 |
+| L3 / R3 (R pan inv) | 474, 345 | 414, 345 | 559, 349 | 474, 313 |
 
 Back of Floor lesson: the Scan 110 centerline tilt (Y 345) only holds for targets near the middle of the room. For targets far down the room the beam is longer, so the same tilt overshoots across the floor and the L and R pools pass each other. Lower the tilt the further along the room the target is (L1/R1 at Back of Floor needed about +18 px).
 | F Vortex 405 | center | center | center | center |
