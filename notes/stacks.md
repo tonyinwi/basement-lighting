@@ -66,11 +66,21 @@ Neon, mirror balls, warm sunsets and gobos. No tech-house red or white beams.
 2. Hazer: the beams need haze, and the hazer's DMX doesn't work. Run it by hand during shows?
 3. The lounge WiFLY: steady low color matching each look, or keep it out of the stacks?
 
-## What got built (Claude-2230.ssproj, Bank 1)
-| Slot | Name | What it does now |
-|---|---|---|
-| 1 | Blue Hour | Main Track blue with a slow 1-bar breath (67%). Saber warm white (255/170/80) on the big ball, breathing with the room. Pocket Beam breathing on the tiny ball (Tiny Ball position). Vortex, Shocker, Spots, Scan 110s, Scan 360s and Mega64 at 0. |
-| 2 | Scissors | Blue breath on the Tripars and Mega64. Both Scan 360s cyan. Scan 110s white. Positions: Lanes at bar 1, Cross at bar 9 (scans open and close). Saber, Spots, Vortex and Shocker at 0. |
-| 3 | Cherry Bounce | Main Track red with Flash And Fade on every kick (Tripars and the tiny ball). Scan 110s white with Smooth Pulse peaking on the offbeats. Lanes, then Cross at bar 9. Scan 360s, Spots, Mega64, Saber, Vortex and Shocker at 0. |
-| 4 | Call and Answer | Red kick on the floor. The Spots (red) flash on the kick in bars 1-2, 5-6, 9-10 and 13-14. The Scan 110s answer on the offbeat in bars 3-4, 7-8, 11-12 and 15-16, dropping to 10% in between. Lanes, then Cross at bar 9. |
-| 5-8 | (stock, not yet replaced) | |
+## What got built (Bank 1, in Claude-2330.ssproj)
+All 8 are 16 bars. The Pocket Beam sits on the tiny ball in every position used here. Anything not listed is held at 0 with an explicit override.
+
+| Slot | Name | Palette | What it does |
+|---|---|---|---|
+| 1 | Blue Hour | Blue + warm white | Tripars blue, breathing once per bar. Saber warm white (255/170/80) on the big ball. Pocket Beam on the tiny ball (Tiny Ball position). |
+| 2 | Scissors | Ice blue + cyan + white | Tripars and Mega64 ice blue, breathing. Both Scan 360s cyan. Scan 110s white. Lanes at bar 1, then Cross at bar 9: the L/R pairs open and close like scissors. |
+| 3 | Cherry Bounce | Red + white | Tripars red with Flash And Fade on every kick (1/4). Scan 110s white with Smooth Pulse peaking on the offbeats. Lanes, then Cross. |
+| 4 | Call and Answer | Red + white | Red kick on the floor. The Spots (red) flash on the kick in bars 1-2, 5-6, 9-10 and 13-14. The Scan 110s answer on the offbeat in bars 3-4, 7-8, 11-12 and 15-16, dropping to 10% while the Spots play. |
+| 5 | The Sweep | Amber + white | Tripars amber, breathing. Scan 110s sweep back to front: G3 (L3/R3) in bars 1-4, G2 in 5-8, G1 in 9-16; G3 and G2 return in 13-16. Spots and Scan 360s fade in over bars 13-16. Positions: Back of Floor (1), Lanes (5), Front of Floor (9), Floor Center (13), so everything converges at the end. |
+| 6 | Spiral Peak | Deep blue + white | The only all-on look. Tripars blue with the kick flash. Spots open white on a small Figure 8. Scan 360s white on small circles, F4 reversed against F2. Scan 110s on the offbeat pulse. Shocker hits only in bars 1 and 9, on quarter notes (about 2 Hz, under the 4 Hz safety limit). Lanes, then Cross. |
+| 7 | One Beam | One white beam | Only L2 Scan 160: fades in over all 16 bars at the Cross position. Saber on the big ball. Pocket Beam on the tiny ball. Tripars and everything else dark. Best with haze. |
+| 8 | Blue Return | Blue + magenta | Tripars blue, breathing. Spots magenta easing from Front of Floor (bar 1) to Floor Center (bar 9). Saber and Pocket on the balls. Hands back to Blue Hour. |
+
+**Not checked on the lights yet.** Tony should run Bank 1 with music and note which looks miss. Likely tweaks:
+- Steady intensity levels (everything breathes or pulses for now).
+- Whether the group-level zero overrides really black out every member light.
+- Movement sizes on the Spots and Scan 360s.

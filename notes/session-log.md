@@ -44,3 +44,6 @@
 - **22:23** Tony's Autoloop feedback: color changes are too fast; respect the color wheels; build "active looks" (one look, one color, one feeling) instead of animations. Now in `CLAUDE.md`.
 - **22:24** Tony: consider how each light looks in space with the others; use lights individually and cleverly instead of everything on all the time. Added to `CLAUDE.md`.
 - **22:25** Tony programs in stacks: a bank is a stack of looks that transition well into each other. EDM and 80s sit apart, in separate banks, with no transitions between them.
+- **22:31** Tony left the Mac awake (caffeinate) for overnight work, in working copies Claude-2230 / Claude-2330.
+- **22:41-22:54** Tony's direction: coordinated palettes, not random colors; follow LD best practice; treat lights as objects that interact. A research pass and his references (the orchestra post, Ultra main stage, Mau P, Carl Cox) went into `design-research.md`.
+- **23:00-23:45** Built all 8 Bank 1 Autoloops by hand (`stacks.md`, "What got built"). Saved in Claude-2330.ssproj. Claude.ssproj is untouched.

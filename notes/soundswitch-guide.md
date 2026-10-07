@@ -100,6 +100,11 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Positions:** drag a position from the Positions panel onto the lane just above the bar ruler.
 - **Rename / Delete / Duplicate:** right-click the Autoloop slot. Duplicate fails when all 128 slots are full, so delete a stock loop first. Deleting shifts every later loop up one slot across banks. A duplicate lands in the last slot; drag it to where you want it.
 - **Save:** Cmd-S saves the project in Edit mode, and the "Saving Project / Completed" dialog confirms it.
+- **The Main Track needs its own color.** A loop copied after clearing can end up with no Main Track color at all; then lights without their own color get no defined color. Fix: right-click the Main Track color lane (just above the position lane) > Select Color Track, then right-click > Apply Color.
+- **Delete Override:** right-click a selection on a track that has an override; the menu shows **Delete Override**.
+- **Movement effects:** select a range on a mover track, right-click > Apply Movement Effect. Shapes: Circle, Scan Horizontal/Vertical, Oval Horizontal/Vertical, Figure 8 Horizontal/Vertical, Square, Triple 8 Horizontal/Vertical. Size and Speed each have a start and end handle (ramps). **Reverse** flips the direction, so a pair can circle against each other.
+- **Group scope:** a zero override on a collapsed group header blacks out the whole group, and a member track with its own data overrides the group.
+- **Position cue at bar 1:** drag the position onto the lane just above the bar ruler, at bar 1 (x about 244 with the current window).
 - **Still to figure out:** setting a steady, non-pulsing level (the override line wouldn't drag), and per-group position cues (Shift+P).
 
 ## Autoloops
