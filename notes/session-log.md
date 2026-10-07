@@ -51,3 +51,4 @@
 
 ## 2026-10-07
 - **06:13** Tony: the basement nightclub is called **Studio 841**. The 841 logo can be used in Autoloops if it's strategic. He asked about QLC+; research is in `notes/qlcplus.md`.
+- **07:23** Tony decided against QLC+ ("kind of a hot mess"). Staying on SoundSwitch.

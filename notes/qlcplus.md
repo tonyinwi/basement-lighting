@@ -1,5 +1,7 @@
 # QLC+ as an alternative to SoundSwitch (researched 2026-10-07)
 
+**Decision (Tony, 2026-10-07): not going there.** After reading up, he found it "kind of a hot mess". Studio 841 stays on SoundSwitch and the Control One. This page is kept for reference only.
+
 ## Facts
 - **QLC+** is free and open source (Apache 2.0). Version 5.1.0 came out on 2026-01-05.
 - 5.1 adds an experimental audio beat tracker, plus Virtual Console XY pad and audio-trigger widgets.

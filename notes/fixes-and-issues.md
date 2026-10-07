@@ -23,4 +23,4 @@
 - **R3 204 is broken.** It's programmed and waiting for repair.
 - **WiFLY name:** the WiFLY's name won't change in SoundSwitch.
 - **Stray static looks:** "113" (twice) and "105" in Bank 4, "98" in Bank 4, and "1" in Bank 1.
-- **QLC+** is a possible future alternative to SoundSwitch.
+- **QLC+** was looked at and ruled out (2026-10-07). See `qlcplus.md`.
