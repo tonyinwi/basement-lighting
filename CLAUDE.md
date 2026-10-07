@@ -32,28 +32,29 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed). Later, a Spot position on the mini bar, which Tony may turn into a DJ booth.
-2. Check L3 171 alone at Back of Floor and Cross.
-3. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
-4. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:
+1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
+2. **DJ booth:** now set up at the front of the dance floor, stage right (Tony's words; if he means the performer's right, that's the left side seen from the back - confirm). Tony will check whether he has a second 841 gobo; if so, put it in a Spot and project the logo onto the booth. Also add a Spot position for the booth.
+3. Check L3 171 alone at Back of Floor and Cross.
+4. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
+5. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:
    - Tripars on a slow color wash
    - Movers easing between Floor Center and Front of Floor
    - Vortex spinning
    - Pocket Beam on the tiny ball
    - Saber on the big ball
    - No strobe
-5. Cleanup:
+6. Cleanup:
    - Delete the stray looks: "113" (twice) and "105" in Bank 4, "98" in Bank 4 and "1" in Bank 1.
    - Set every fixture's signal-loss behavior to Blackout.
    - File > Export to Control One.
-6. Hardware:
+7. Hardware:
    - Repair R3 204 (it's already programmed).
    - Fix the hazer's DMX.
    - Re-add one Pocket Roll.
    - Consider another LED pinspot (or a pinhole gobo) for the big ball.
    - Measure where the tiny ball and the Fog Fury are, and add them to the 3D model.
    - Track down the idle glow on the Vortex and the Scan 110s.
-7. Back up `Claude.ssproj` and the custom Fixture Manager profile ("Intimidator Scan 360 Rev 2 tony") into this repo.
+8. Back up `Claude.ssproj` and the custom Fixture Manager profile ("Intimidator Scan 360 Rev 2 tony") into this repo.
 
 ## Files
 - `notes/rig.md` - room geometry, fixtures, positions in the room, patch, groups

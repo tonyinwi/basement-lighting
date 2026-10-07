@@ -35,3 +35,5 @@
 - **21:01** Talked through how positions, static looks and Autoloops interact (now in `soundswitch-guide.md`). With no Autoloop playing and no look holding it, the Pocket Beam sits at home, pointing straight up.
 - **21:06** "Mirror Ball" static look made in Bank 4 (row 2, slot 4): Saber on the big ball, Pocket Beam on the little ball. Tony: "perfect". Saved.
 - **21:08** After the save, SoundSwitch stopped responding with the Edit-mode File menu open on screen. Left it alone (Import and Export to Control One sit in that menu) and asked Tony to check.
+- **21:14** Tony force-quit and reopened SoundSwitch. Everything saved came back (Bank 4: CAL Test, Vortex Show, 841, Mirror Ball). The window now opens larger, so screen coordinates moved.
+- **21:14** The DJ booth is now set up at the front of the dance floor, stage right. To-do: check for a second 841 gobo to project onto it.

@@ -12,6 +12,7 @@
 - **Vortex was stuck on one look.** The "Vortex Show" static look runs its built-in program instead.
 
 ## Open issues
+- **SoundSwitch froze after a save (2026-10-06 21:08)** with the Edit-mode File menu drawn open. Force Quit and relaunch fixed it, and nothing saved was lost.
 - **The Vortex can't be colored by the Autoloops.** Its SoundSwitch profile exposes no color channels (the Color cell in Static Looks is blank). Barrel Rotation, Show and Reflector Rotation are attributes, and the Autoloops never animate them. To fix:
   - Map its color channels in Fixture Manager.
   - Add attribute cues in our own Autoloops.

@@ -43,6 +43,7 @@ Listed from the front (speakers) toward the back.
 
 **Other details:**
 - All Scan 110s hang at 6'7". They are spaced about 5' (60") apart along each beam.
+- **DJ booth (2026-10-06):** set up at the front of the dance floor, stage right (Tony's words). Not measured yet. It replaces the earlier idea of using the mini bar.
 - **Tiny mirror ball:** sits in front of the Fog Fury and is lit by the Pocket Beam. Its exact position hasn't been measured yet.
 
 **Not patched:**
