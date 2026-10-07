@@ -33,7 +33,7 @@ Treat each light, or each pair, as a character that interacts with the others:
 | Effect | Vortex 405 (Mover Tertiary G1) | Moonflower beams everywhere. Loud, use rarely. |
 | Hit | Shocker 417 (Strobe) | White blinder. Peaks only. |
 | Lounge | WiFLY 104 (Wash Tertiary), behind the back wall | Separate room. Keep a steady, low glow so it doesn't fight the floor. |
-| Logo | Spot 1 on the 841 gobo, through the "841" static look | A static look over the stack, not part of it |
+| Logo | Spot 1 on the 841 gobo (Studio 841's logo) | Use it strategically inside Autoloops: a reveal at a breakdown or the drop, then gone. Spot 1 gets a Position Override to 841 Logo while every other mover keeps the Main Track's position. The "841" static look is still there for holding it. |
 
 ## Bank 1 - tech house / techno (play Sequential) - revised after research
 The orchestra principle: few instruments at a time, building toward a few big moments. Color sits in the pools; white sits in the beams. Wheel lights hold one color per loop.

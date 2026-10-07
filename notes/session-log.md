@@ -48,3 +48,6 @@
 - **22:41-22:54** Tony's direction: coordinated palettes, not random colors; follow LD best practice; treat lights as objects that interact. A research pass and his references (the orchestra post, Ultra main stage, Mau P, Carl Cox) went into `design-research.md`.
 - **23:00-23:45** Built all 8 Bank 1 Autoloops by hand (`stacks.md`, "What got built"). Saved in Claude-2330.ssproj. Claude.ssproj is untouched.
 - **23:46-23:57** Built five 80s looks at the top of Bank 2. Checkpoint saved as Claude-0000.ssproj. Gobo attribute cues are left for the morning, since the presets are global.
+
+## 2026-10-07
+- **06:13** Tony: the basement nightclub is called **Studio 841**. The 841 logo can be used in Autoloops if it's strategic. He asked about QLC+; research is in `notes/qlcplus.md`.

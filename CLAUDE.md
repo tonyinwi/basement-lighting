@@ -1,6 +1,6 @@
-# Basement Nightclub - lighting
+# Studio 841 - lighting
 
-Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. The sound system is a separate repo (`tonyinwi/basement-sound`).
+Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "841 STUDIO"). This repo covers its DJ room lighting, run with SoundSwitch 2.11 and a Control One. The sound system is a separate repo (`tonyinwi/basement-sound`).
 
 ## Working rules
 - **Ask before anything risky or hard to undo.** That includes deleting fixtures or looks, Options > Update Fixtures, Reset Default Autoloops, and Export to Control One.
@@ -27,7 +27,7 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - Tiny Ball has only the Pocket Beam aimed.
   - Back of Floor and Cross are camera-checked (2026-10-06). Cross is now a wide X with separate pools.
   - Lanes and Ball are done (2026-10-06). In Ball the Pocket Beam lights the big ball; it sits on the tiny ball in every other position.
-  - "841 Logo" is done: Spot 1 throws the custom 841 gobo (value 36) onto the wall behind the bar, with a slow spin (Gobo Rotation 10). It aims Spot 1 only, so don't use it in Autoloops.
+  - "841 Logo" is done: Spot 1 throws the custom 841 gobo (value 36) onto the wall behind the bar, with a slow spin (Gobo Rotation 10). It aims only Spot 1, so never put it on the Main Track. Tony (2026-10-07): **the logo can go in Autoloops, strategically**, as a moment rather than wallpaper. The way to do it is a Position Override on Spot 1's track only (Shift+P), plus the gobo as an attribute cue.
   - Spot 1 gobo map: `notes/calibration.md`.
 - **Autoloops (in Claude-0000.ssproj):**
   - Bank 1 is the hand-built EDM / tech house stack: Blue Hour, Scissors, Cherry Bounce, Call and Answer, The Sweep, Spiral Peak, One Beam, Blue Return.
