@@ -11,6 +11,12 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
 - Use regular hyphens in writing, not em dashes.
 - After each session, update the notes and `notes/session-log.md`, then commit.
 
+## How Tony wants Autoloops built (his feedback after the 2026-10-06 demo)
+- **An Autoloop is an "active look": one look, one color, one feeling.** It's not an animation that cycles through things.
+- **Slow color changes.** The stock Autoloops changed color far too fast.
+- **Respect the color wheels.** Wheel fixtures (Spots, Scan 360s, Vortex) should hold a color, not spin through the wheel.
+- Movement and intensity can breathe with the music. The color and the character of the look stay put for the whole loop.
+
 ## Current state (2026-10-06)
 - **Patch:** validated and named. Groups are set: a pair shares a group, and a one-off gets its own. Full table in `notes/rig.md`.
 - **Positions:**

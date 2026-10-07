@@ -38,3 +38,7 @@
 - **21:14** Tony force-quit and reopened SoundSwitch. Everything saved came back (Bank 4: CAL Test, Vortex Show, 841, Mirror Ball). The window now opens larger, so screen coordinates moved.
 - **21:14** The DJ booth is now set up at the front of the dance floor, on the left seen from the back (Tony's "stage right", standing behind the front bar). To-do: check for a second 841 gobo to project onto it.
 - **21:21** Tried a second 841 look on the DJ booth with Spot 1. Spot 1 can't aim there, so it was aborted. Left behind, unsaved: a "DJ Booth" position (Cancel doesn't remove a new position) and an empty look "99".
+- **22:10** Fixed F2's color order: made the "Intimidator Scan 360 Claude" profile (same ID as the stock one, wheel recolored to the newer order) and ran Update Fixtures with Tony's OK. It updated 2 fixtures; F2 and F4 lost their names and groups, and both were restored (Mover Primary G2). The yellow test then showed yellow on both, and F2 still landed on Floor Center. Saved.
+- **22:11** Demo set up: Bank 1 Autoloops plus Mirror Ball, 841 and Vortex Show.
+- **22:15** Tony: pressing Black leaves the Vortex running during Vortex Show.
+- **22:23** Tony's Autoloop feedback: color changes are too fast; respect the color wheels; build "active looks" (one look, one color, one feeling) instead of animations. Now in `CLAUDE.md`.
