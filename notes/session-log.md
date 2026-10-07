@@ -32,3 +32,6 @@
 - **20:39** The logo wouldn't focus well on the floor, so Tony moved it onto the white wall behind the bar and focused it. It read upside down; the Spot 255 can't index gobo rotation, so a slow spin (Gobo Rotation 10) was added instead. Tony: "Perfect." Saved.
 - **20:46** Tony may turn the mini bar into a DJ booth. A Spot position on the mini bar is for later.
 - **20:51** "841" static look made in Bank 4 (row 2, slot 3): the spinning logo on its own, to switch on over any Autoloop. Saved.
+- **21:01** Talked through how positions, static looks and Autoloops interact (now in `soundswitch-guide.md`). With no Autoloop playing and no look holding it, the Pocket Beam sits at home, pointing straight up.
+- **21:06** "Mirror Ball" static look made in Bank 4 (row 2, slot 4): Saber on the big ball, Pocket Beam on the little ball. Tony: "perfect". Saved.
+- **21:08** After the save, SoundSwitch stopped responding with the Edit-mode File menu open on screen. Left it alone (Import and Export to Control One sit in that menu) and asked Tony to check.

@@ -25,13 +25,14 @@ Tony's basement DJ room lighting, run with SoundSwitch 2.11 and a Control One. T
   - Banks 2-4 still have no position cues.
   - The 32 Autoloops are still the stock "Dynamic" ones.
 - **Static Look "841"** (Bank 4, row 2 slot 3) puts the spinning 841 logo on the wall behind the bar. Switch it on over any Autoloop.
+- **Static Look "Mirror Ball"** (Bank 4, row 2 slot 4): Saber on the big ball, Pocket Beam on the little ball.
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.
 - **Mac setup:**
   - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude.ssproj`. Always use the **disk venue**. The USB venue is the Control One copy.
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-1. Finish the Pocket Beam. Later, a Spot position on the mini bar, which Tony may turn into a DJ booth.
+1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed). Later, a Spot position on the mini bar, which Tony may turn into a DJ booth.
 2. Check L3 171 alone at Back of Floor and Cross.
 3. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
 4. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:

@@ -107,3 +107,4 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Focus:** if SoundSwitch isn't the focused window, the first click only focuses it, and the next click lands somewhere else. Verify that an editor actually opened before dragging, or the drags land on the look grid.
 - **Perform File menu:** "Import from Control One" sits right where Save Project sits in Edit mode. A mis-click on 2026-10-05 probably triggered it. The only visible effect was an extra "113" look.
 - **Photo Booth** pauses in the background. Bring it forward to refresh.
+- **Frozen after save (2026-10-06):** right after a save, SoundSwitch once stopped responding with the Edit-mode File menu drawn on screen. Don't click around in that menu blind: Export to Control One and Import from Control One are in it.
