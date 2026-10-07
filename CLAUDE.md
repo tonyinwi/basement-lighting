@@ -18,6 +18,15 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - Movement and intensity can breathe with the music. The color and the character of the look stay put for the whole loop.
 - **Program in stacks.** A bank is a stack of looks that flow well into each other, like Bank 1 = one stack. Order them so each one transitions nicely to the next.
 - **Keep genres apart.** Dance/tech house (EDM) and 80s are separate stacks in separate banks. Never plan a transition between them.
+- **Tony's notes after reviewing the overnight build (2026-10-07):**
+  - **Pocket Beam:** use it only on the tiny ball, and only as a "hit" accent. Take it out of everything else.
+  - **Spots:** use them more aggressively.
+  - **Floor wash:** step the Tripars down the floor (chase) instead of always flashing them together.
+  - **Prisms:** use them (Spots and Scan 360s).
+  - **Brightness:** about 50% brighter overall, with more lights on or intensity up.
+  - **Order:** #4 Call and Answer is too much red right after Cherry Bounce.
+  - **Movement:** more of it, generally.
+  - **Before building anything new:** Tony wants to research the new Autoloop features, then program a scene himself so Claude can see how he does it.
 - **Design in space, not all-on.** Think about how each light reads in the room next to the others. Use lights on their own or in small groups: a lone beam, just the I-beam scans, only the front bar. Don't run everything all the time. Leave darkness and contrast, and look for clever single-light moments.
 
 ## Current state (2026-10-06)
@@ -31,8 +40,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
   - Spot 1 gobo map: `notes/calibration.md`.
 - **Autoloops (in Claude-0000.ssproj):**
   - Bank 1 is the hand-built EDM / tech house stack: Blue Hour, Scissors, Cherry Bounce, Call and Answer, The Sweep, Spiral Peak, One Beam, Blue Return.
-  - Bank 2 starts with 5 hand-built 80s looks (Neon Sign, Roller Rink, Miami, Sunset Strip, Purple Swirl); the rest are stock.
-  - Banks 3-4 are still stock.
+  - **Correction:** each bank holds 32 Autoloops, and clicking a bank's name in the Autoloop panel switches banks. The 5 "80s" looks were built in **Bank 1 slots 9-13**, not Bank 2 (the editor header read "Bank 1 : Dynamic"). They need moving to the real Bank 2, to keep the genres apart.
 - **Static Look "841"** (Bank 4, row 2 slot 3) puts the spinning 841 logo on the wall behind the bar. Switch it on over any Autoloop.
 - **Static Look "Mirror Ball"** (Bank 4, row 2 slot 4): Saber on the big ball, Pocket Beam on the little ball.
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.

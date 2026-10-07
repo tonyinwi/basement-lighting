@@ -85,8 +85,8 @@ All 8 are 16 bars. The Pocket Beam sits on the tiny ball in every position used 
 - Whether the group-level zero overrides really black out every member light.
 - Movement sizes on the Spots and Scan 360s.
 
-## What got built (Bank 2, 80s, in Claude-0000.ssproj)
-Bank 2 ("Upbeat") now starts with five 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
+## What got built (80s, in Claude-0000.ssproj)
+**These are actually in Bank 1, slots 9-13**, not Bank 2: each bank has 32 slots, and the panel shows one bank at a time. Move them to the real Bank 2. There are five 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
 
 | Slot | Name | Palette | What it does |
 |---|---|---|---|
@@ -101,3 +101,13 @@ Still to do for Bank 2:
 - **The swirl gobo on Purple Swirl** (Spot 1 gobo 28, slow rotation) isn't on yet. Gobo Change / Custom Cue attribute presets are global, so editing one could change other loops. That needs a check first.
 - **The pink dot-ring gobo** (12) on Sunset Strip: same reason.
 - **Vortex Party:** waits on the Vortex color profile.
+
+## Tony's review notes (2026-10-07), to apply in the next pass
+- Pocket Beam: tiny ball only, as a hit accent. Remove it everywhere else.
+- Spots: more aggressive.
+- Tripars: step or chase them down the floor instead of flashing all together.
+- Prisms: use them on the Spots and Scan 360s.
+- About 50% brighter: more lights on, or intensity up.
+- Too much red: #4 Call and Answer right after #3 Cherry Bounce. Recolor #4 or reorder.
+- More movement generally.
+- First, Tony researches the new Autoloop features and programs a scene himself so Claude can learn his method.

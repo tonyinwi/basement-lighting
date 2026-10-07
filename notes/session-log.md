@@ -52,3 +52,4 @@
 ## 2026-10-07
 - **06:13** Tony: the basement nightclub is called **Studio 841**. The 841 logo can be used in Autoloops if it's strategic. He asked about QLC+; research is in `notes/qlcplus.md`.
 - **07:23** Tony decided against QLC+ ("kind of a hot mess"). Staying on SoundSwitch.
+- **18:36** Tony's review notes on the overnight build are in `CLAUDE.md` and `stacks.md`. Banks hold 32 Autoloops each, so the 80s looks sit in Bank 1 slots 9-13. Before more building, Tony will research the new Autoloop features and program a scene for Claude to watch.

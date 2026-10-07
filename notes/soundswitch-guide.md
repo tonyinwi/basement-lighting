@@ -29,7 +29,7 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
   - Attribute Cues: Gobo Change 1-3, Custom Cue 1-5, smoke
 - **Right column:** fixture tracks with M/S (mute/solo), plus the Main Track.
 - **Bottom right:**
-  - **A** opens the Autoloop banks: Bank 1 Dynamic, Bank 2 Upbeat, Bank 3 Smooth, Bank 4 Random, 8 Autoloops each, 16 bars long. **Double-click a slot to open it in the timeline.**
+  - **A** opens the Autoloop panel. **There are 4 banks of 32 Autoloops each** (Bank 1 Dynamic, Bank 2 Upbeat, Bank 3 Smooth, Bank 4 Random), 128 in total (since 2.9). The panel shows the current bank's 32 slots in 4 columns of 8. **Click a bank's name to switch banks.** The column headers are easy to misread as four banks. The editor's top right confirms which bank you're in (for example "Bank 1 : Dynamic / 16 Bars"). **Double-click a slot to open it in the timeline.**
   - **S** is presumably scripted tracks.
   - Transport buttons.
 - **Top bar:**
