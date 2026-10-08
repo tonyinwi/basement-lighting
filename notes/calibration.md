@@ -135,3 +135,10 @@ Identified 2026-10-06 from a slot-by-slot sweep Tony filmed, and matched to the 
 - **841 (row 2, slot 3):** Spot 1 only. White, full, 841 Logo position, Gobo Wheel 36 (841 logo), Gobo Rotation 10 (slow spin). Puts the spinning logo on the wall behind the bar. Switch it on over any Autoloop. Made 2026-10-06.
 - **Mirror Ball (row 2, slot 4):** the Saber (52) on the big ball and the Pocket Beam (27) on the little ball (Tiny Ball position), both white at full. Tony: "perfect". Made 2026-10-06. Tony first tried the Pocket Beam on the big ball (Ball position), then chose the little ball for this look.
 - **Vortex Show (row 1, slot 4):** includes only the Vortex. Full brightness, Barrel Rotation 65 (medium spin), Show 134 (a built-in program). Tony likes it. Run it alongside the Autoloops.
+- **Vortex Slow / Medium / Fast (row 4, slots 1-3), made 2026-10-07:** copies of Vortex Show with the Vortex's **Show Speed** attribute ticked (it was already in the profile, so no Fixture Manager change was needed). Same Show 134 in all three.
+  - Slow: Show Speed 10, Barrel Rotation 110 (slow CCW).
+  - Medium: Show Speed 120, Barrel Rotation 65 (as Vortex Show).
+  - Fast: Show Speed 230, Barrel Rotation 30 (fast CCW).
+  - Manual: ch8 Show Speed runs slow to fast; barrel CCW 10-120 is fast to slow.
+  - **Not yet seen on the light.** If Slow still looks busy, lower the barrel further (closer to 120) or try another Show value.
+- **841 Fade (row 3, slot 2), made 2026-10-07:** a copy of "841" with Fade In 2 s and Fade Out 2 s, so the logo breathes on and off when switched instead of snapping. A static look can't pulse by itself (no pulse or intensity-effect option in the look editor), so the beat-synced **pulsing logo lives in Autoloop Bank 3 slot 7, "R2 7 841 Breakdown"**.

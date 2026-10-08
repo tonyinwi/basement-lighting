@@ -53,3 +53,9 @@
 - **06:13** Tony: the basement nightclub is called **Studio 841**. The 841 logo can be used in Autoloops if it's strategic. He asked about QLC+; research is in `notes/qlcplus.md`.
 - **07:23** Tony decided against QLC+ ("kind of a hot mess"). Staying on SoundSwitch.
 - **18:36** Tony's review notes on the overnight build are in `CLAUDE.md` and `stacks.md`. Banks hold 32 Autoloops each, so the 80s looks sit in Bank 1 slots 9-13. Before more building, Tony will research the new Autoloop features and program a scene for Claude to watch.
+- **~21:00** Tony, going to bed: build tonight in another bank so the old looks stay for comparison; research the new Autoscript for Autoloops; make Vortex Show slow / medium / fast; put a pulse on the 841 logo. He pre-approved a Vortex profile update if one was needed.
+- **~21:05** Working copy saved as **Claude-2100.ssproj**. Claude-0000 is untouched.
+- **~21:15** Vortex Slow / Medium / Fast static looks made (Bank 4, row 4). The Vortex profile already exposed Show Speed, so no Fixture Manager change or Update Fixtures was needed. "841 Fade" static look made (row 3, slot 2): a static look can't pulse, so it fades in and out over 2 s instead. Saved.
+- **~21:25** Autoscript research in `notes/autoscript.md` (web plus the dialog itself).
+- **~21:30** SoundSwitch froze while scrolling the Autoscript preset dropdown. Force-quit through Activity Monitor (Tony's computer-use approval covered it) and reopened. Nothing saved was lost.
+- **21:40-22:25** Round 2 EDM stack built in **Bank 3 slots 1-8** with Autoscript plus hand edits, applying Tony's notes (`stacks.md`, "Round 2"). New attribute cues: Prism Spots + 360s, 841 Logo Gobo, Spots Clean. "R2 7 841 Breakdown" has the pulsing 841 logo on Spot 1. Saved after every loop. Confirmed the 80s looks really are in Bank 1 slots 9-13. **Nothing checked on the lights.**

@@ -40,16 +40,23 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
   - Spot 1 gobo map: `notes/calibration.md`.
 - **Autoloops (in Claude-0000.ssproj):**
   - Bank 1 is the hand-built EDM / tech house stack: Blue Hour, Scissors, Cherry Bounce, Call and Answer, The Sweep, Spiral Peak, One Beam, Blue Return.
-  - **Correction:** each bank holds 32 Autoloops, and clicking a bank's name in the Autoloop panel switches banks. The 5 "80s" looks were built in **Bank 1 slots 9-13**, not Bank 2 (the editor header read "Bank 1 : Dynamic"). They need moving to the real Bank 2, to keep the genres apart.
+  - **Correction:** each bank holds 32 Autoloops, and clicking a bank's name in the Autoloop panel switches banks. The 5 "80s" looks were built in **Bank 1 slots 9-13**, not Bank 2 (confirmed 2026-10-07). They need moving to the real Bank 2, to keep the genres apart.
+  - **Bank 3 slots 1-8 (Claude-2100.ssproj):** the round 2 EDM stack, "R2 1" to "R2 8".
 - **Static Look "841"** (Bank 4, row 2 slot 3) puts the spinning 841 logo on the wall behind the bar. Switch it on over any Autoloop.
 - **Static Look "Mirror Ball"** (Bank 4, row 2 slot 4): Saber on the big ball, Pocket Beam on the little ball.
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.
+- **Static Looks "Vortex Slow / Medium / Fast"** (Bank 4, row 4) are the same show at three Show Speeds and barrel speeds. **"841 Fade"** (row 3, slot 2) is the logo with 2 s fades. Details: `notes/calibration.md`.
 - **Mac setup:**
   - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude.ssproj`. Always use the **disk venue**. The USB venue is the Control One copy.
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-**Morning of 2026-10-07 - start here.** Overnight work is in `/Users/tonyw/Dropbox/SoundSwitch/Claude-0000.ssproj`, the newest file. Claude.ssproj is the 22:10 state, kept as a fallback. Bank 1 is the EDM stack (8 looks); Bank 2 starts with 5 80s looks. See `notes/stacks.md`. Run Bank 1 with music, BPM on and haze, and tell Claude which looks miss. If Tony likes it, make Claude-0000 the main file (Save As Claude.ssproj).
+**Morning of 2026-10-08 - start here.** The newest file is `/Users/tonyw/Dropbox/SoundSwitch/Claude-2100.ssproj`. It's Claude-0000 plus last night's work:
+- **Bank 3 slots 1-8: the round 2 EDM stack** ("R2 1 Deep Blue" to "R2 8 Blue Return"), built with Autoscript and then hand-edited to Tony's notes. Compare it with round 1 in Bank 1 slots 1-8. See `notes/stacks.md`, "Round 2".
+- **Static Looks Bank 4:** Vortex Slow / Medium / Fast (row 4) and 841 Fade (row 3, slot 2). The pulsing logo is the Autoloop "R2 7 841 Breakdown".
+- Autoscript notes: `notes/autoscript.md`.
+- None of it has been seen on the lights. Run Bank 3 with music, BPM on and haze.
+- Claude-0000 is unchanged (round 1 only). Claude.ssproj is the 2026-10-06 22:10 fallback.
 
 0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
@@ -82,4 +89,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - `notes/soundswitch-guide.md` - how the app works, plus the gotchas
 - `notes/fixes-and-issues.md` - fixes made and open issues
 - `notes/session-log.md` - timeline
+- `notes/stacks.md` - Autoloop stacks: plans, what got built, Tony's notes
+- `notes/autoscript.md` - Autoscript for Autoloops: how it works, dialog settings, user tips
+- `notes/design-research.md` - lighting-design research and Tony's references
 - `model/basement-rig-map.html` - 3D model (Three.js). Fixture data is in the `FX` array, in inches.

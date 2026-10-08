@@ -105,7 +105,23 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Movement effects:** select a range on a mover track, right-click > Apply Movement Effect. Shapes: Circle, Scan Horizontal/Vertical, Oval Horizontal/Vertical, Figure 8 Horizontal/Vertical, Square, Triple 8 Horizontal/Vertical. Size and Speed each have a start and end handle (ramps). **Reverse** flips the direction, so a pair can circle against each other.
 - **Group scope:** a zero override on a collapsed group header blacks out the whole group, and a member track with its own data overrides the group.
 - **Position cue at bar 1:** drag the position onto the lane just above the bar ruler, at bar 1 (x about 244 with the current window).
-- **Still to figure out:** setting a steady, non-pulsing level (the override line wouldn't drag), and per-group position cues (Shift+P).
+- **Still to figure out:** setting a steady, non-pulsing level (the override line wouldn't drag).
+
+## More Autoloop technique (learned 2026-10-07 night)
+- **Autoloop panel layout (confirmed):** the header row "Bank 1 : Dynamic | Bank 2 : Upbeat | Bank 3 : Smooth | Bank 4 : Random" is the **bank selector**. Below it are the selected bank's 32 slots in 8 columns of 4, so slots 9-16 sit under the "Bank 2" header even when Bank 1 is selected. The editor's top right ("Bank 3 : Smooth / 16 Bars") names the real bank.
+- **Rename a slot:** right-click it > Rename, then Cmd-A, type, Return. The first time after opening a loop, the menu sometimes appears without the field going into edit; open the menu again.
+- **Autoscript dialog:** the AUTO button. See `autoscript.md`. In the Positions and Attribute Cues tables, **clicking a Main 1 / Main 2 number cycles it** (0 = unused, then 1, 2 ...). It remembers the last loop's settings.
+- **Position Override for one fixture (Shift+P):** select a range on the fixture's track, right-click > Create Position Override, then drag a position from the Positions panel onto that track. That fixture follows its own position while the rest follow the Main Track. Used for Spot 1 on 841 Logo.
+- **New attribute cue:** the + next to "Attribute Cues" > Create Attribute Cue adds "New Attributes Cue" at the bottom of the list. Right-click > Rename Attributes Cue. Double-click it to edit: pick a fixture on the left, tick an attribute, double-click its number to type a value, then Apply. Cues are global presets; drag one onto the Main Track's cue lane (just above the color lane, y about 709) at the bar you want.
+  - Created tonight: **Prism Spots + 360s**, **841 Logo Gobo**, **Spots Clean** (see `stacks.md`).
+  - Gotcha: a drag from the cue list sometimes drops the cue that was **already selected** in the list, not the one under the mouse. Click the cue in the list first, then drag it.
+- **Intensity effect at bar 1:** the first Flash And Fade at the very start of a track sometimes doesn't take. Apply it a second time.
+- **Selecting a whole track:** drag left to right from just inside bar 1 to just inside bar 17. Starting the drag on an existing envelope point moves that point instead (undo with Cmd-Z).
+- **Track list scrolling:** the scroll wheel over the right-hand track names scrolls the list.
+- **Static Look Fade In / Fade Out:** checkboxes with seconds at the top of the look editor. They fade the look in and out when it's switched; a look can't pulse on its own.
+
+## Freezes
+- **2026-10-07, about 21:30:** SoundSwitch froze after scrolling the Autoscript preset dropdown with the mouse wheel. Force-quit (Activity Monitor) and reopen; everything saved came back. Pick presets with single clicks and save before opening that dialog.
 
 ## Autoloops
 - **Perform > Autoloops:** banks 1-4 with 8 each, Play All Banks, Previous / Repeat / Next, Override Scripted Tracks, Sequential / Random. Click a bank header to play that bank, or click an Autoloop to start there.

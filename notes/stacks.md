@@ -86,7 +86,7 @@ All 8 are 16 bars. The Pocket Beam sits on the tiny ball in every position used 
 - Movement sizes on the Spots and Scan 360s.
 
 ## What got built (80s, in Claude-0000.ssproj)
-**These are actually in Bank 1, slots 9-13**, not Bank 2: each bank has 32 slots, and the panel shows one bank at a time. Move them to the real Bank 2. There are five 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
+**These are actually in Bank 1, slots 9-13**, not Bank 2: each bank has 32 slots, and the panel shows one bank at a time. **Confirmed 2026-10-07 night:** with Bank 1 selected, they sit in the second group of columns (slots 9-13), and Bank 2 is still all stock "Upbeat Autoloop 1-32". Move them to the real Bank 2. Not done tonight: there's no free slot to duplicate into, and deleting stock loops shifts every later loop, including the new Bank 3 work. There are five 80s looks. Each is named "80s N ..." so it can't be mistaken for the EDM stack. The rest of Bank 2 is still stock.
 
 | Slot | Name | Palette | What it does |
 |---|---|---|---|
@@ -101,6 +101,33 @@ Still to do for Bank 2:
 - **The swirl gobo on Purple Swirl** (Spot 1 gobo 28, slow rotation) isn't on yet. Gobo Change / Custom Cue attribute presets are global, so editing one could change other loops. That needs a check first.
 - **The pink dot-ring gobo** (12) on Sunset Strip: same reason.
 - **Vortex Party:** waits on the Vortex color profile.
+
+## Round 2 EDM stack (Bank 3 slots 1-8, in Claude-2100.ssproj), built 2026-10-07 night
+Built in **Bank 3 : Smooth**, so Bank 1 (round 1) stays for comparison. Each loop was **roughed in with Autoscript** (`notes/autoscript.md`) using a custom palette, then hand-edited. Same story as Bank 1, re-voiced with Tony's notes. All 16 bars.
+
+Common to all 8:
+- **Autoscript settings:** preset Base Styles, Custom Colors on, Color Change Speed at Slow, Apply Strobe off, only floor positions (Floor Center, Front, Back, Cross, Lanes) in the Main 1 / Main 2 columns. Base Intensity about 50% (was 0% in the stock style), which is the "50% brighter" fix.
+- **Hand edits:** Shocker held at 0. Vortex held at 0 (use the Vortex static looks over the stack). **Pocket Beam held at 0 except a Flash And Fade "hit" at bar 1** (and bar 9 in slots 2-5). It only ever sits on the tiny ball.
+- **Prism:** new attribute cue **"Prism Spots + 360s"** (both Spots and both Scan 360s, Prism 200). New cue **"Spots Clean"** at bar 1 of every loop resets both Spots and Scan 360s to open gobo, no rotation, no prism, so each loop starts clean.
+- Stack order keeps the color moving: blue, ice, red, **amber** (no red after red), magenta, white/blue peak, blue breakdown, blue/magenta return.
+
+| Slot | Name | Palette (RGB) | Positions (Main 1 then Main 2) | Notes |
+|---|---|---|---|---|
+| 1 | R2 1 Deep Blue | Deep blue 0/40/255, violet 40/0/255, warm white 255/170/80 | Floor Center, Front of Floor / Floor Center, Back of Floor | Scan 110 group held at 0 (calm open). Prism from bar 9. |
+| 2 | R2 2 Ice Scissors | Ice 0/160/255, cyan 0/230/255, white | Lanes, Cross / Cross, Lanes | Faster movement. Spots at 0, so the scans and 360s carry it. Prism from bar 9. |
+| 3 | R2 3 Cherry Bounce | Red 255/0/0, red 255/0/25, white | Lanes, Front / Cross, Floor Center | Fast movement. Prism from bar 9. |
+| 4 | R2 4 Amber Sweep | Amber 255/110/0, orange 255/70/0, pale amber 255/190/120 | Back of Floor, Lanes / Front, Floor Center | The back-to-front sweep that converges on Floor Center. Prism from bar 13. Replaces the red #4. |
+| 5 | R2 5 Magenta Fans | Magenta 255/0/170, blue-violet 50/0/255, pink 255/90/220 | Cross, Lanes / Floor Center, Cross | Medium-fast movement. Prism from bar 9. |
+| 6 | R2 6 Spiral Peak | Blue 0/20/255, white, pale blue 170/200/255 | Floor Center, Cross / Lanes, Floor Center | The peak: Base Intensity 65%, fast movement. **Shocker hits only on bar 9** (Flash And Fade 1/4, about 2 Hz at 128 BPM). Prism from bar 9. |
+| 7 | R2 7 841 Breakdown | Deep blue 0/0/200, 20/0/160, warm 255/170/80 | Floor Center (movement off) | The logo moment. **Spot 1 has a Position Override to 841 Logo** (bars 1 and 9) and the **"841 Logo Gobo"** cue (gobo 36, rotation 10) at bar 1. **Spot 1 pulses with Smooth Pulse, 1-bar cycle, 100% depth.** Spot 14, both Scan 360s and the Scan 110 group at 0. Base 27%, Pulse 40%, so the room is dim. |
+| 8 | R2 8 Blue Return | Blue 0/40/255, magenta 255/0/170, warm white 255/170/80 | Front of Floor, Floor Center / Floor Center | Settled groove, medium-slow movement, prism from bar 9. Hands back to slot 1. |
+
+Known rough edges (check with music):
+- Autoscript adds its own intensity shapes. Several Main Tracks are a flat high level for bars 1-8, then a pulse for bars 9-16. That may feel like a two-part loop rather than one look.
+- Slot 8's Main Track color drifts blue to magenta over bars 9-16 and then snaps back to blue at the wrap.
+- Slot 7's Spot 1 takes the Main Track's deep-blue color, so the logo is blue on the wall. If Tony prefers it white like the "841" static look, set Spot 1's color lane to white in that loop.
+- The Spot 1 pulse is at 100% depth, so the logo fully disappears once per bar. 60% would keep it faintly visible.
+- **Nothing was checked on the lights tonight** (no camera check after 21:00).
 
 ## Tony's review notes (2026-10-07), to apply in the next pass
 - Pocket Beam: tiny ball only, as a hit accent. Remove it everywhere else.
